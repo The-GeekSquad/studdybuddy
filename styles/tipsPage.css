@@ -16,21 +16,23 @@ body {
 
 .container
 {
-margin: 0 41px;
-max-width: 900px;
+
 display: flex;
 flex-direction: column;
-gap:19px
+gap:19px;
+margin: 0 41px;
+max-width: 900px;
+
 }
 
 .container .tab
 {
-position: relative;
-background: #fff;
-padding: 0 21px 21px;
 box-shadow: 0 16px 26px rgba(0,0,0,0.05);
 border-radius: 6px;
 overflow: hidden;
+position: relative;
+background: #fff;
+padding: 0 21px 21px;
 }
 
 .container .tab input 
@@ -41,24 +43,24 @@ overflow: hidden;
 
 .container .tab label
 {
-display: flex;
 align-items: center;
 cursor: pointer;
+display: flex;
 }
 
 .container .tab label::after
 {
     content: '*';
+    font-size: 3em;
+    color: rgba(6, 5, 5, 0.1);
     position: absolute;
     right: 21px;
-    font-size: 3em;
-    color: rgba(0, 0, 0, 0.1);
     transition: transform 0.9s;
 }
 
 .container .tab:hover label::after
 {
-    color:#333
+    color:#232323
 
 }
 
@@ -69,31 +71,33 @@ transform: rotate(134deg)
 
 .container .tab label h2
 {
+    
+    border-radius: 4px;
+    margin-right: 11px;
     width: 41px;
     height: 41px;
-    background: #282727;
-    display: flex;
     justify-content: center;
     align-items: center;
     color: #f0f0f0;
     font-size: 1.24em;
-    border-radius: 4px;
-    margin-right: 11px;
+    background: #282727;
+    display: flex;
 
 
 }
 
 .container .tab input:checked ~ label h2
 {
+    
+    font-size: 3.1em;
+    justify-content: flex-end;
+    padding: 1.1px;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    color: rgba(255,255,255,0.3);
-    font-size: 3.1em;
-    justify-content: flex-end;
-    padding: 1.1px;
+    color: rgba(26, 21, 21, 0.3);
 
 
 }
@@ -101,8 +105,8 @@ transform: rotate(134deg)
 .container .tab label h3
 {
     position: relative;
-    font-weight: 501;
     color: #333;
+    font-weight: 501;
     z-index: 11;
 
 }
@@ -147,18 +151,19 @@ transform: rotate(134deg)
 .container .tab .content p
 {
     position: relative;
-    padding: 9px 0;
-    color: #333;
+    color: #242323;
     z-index: 11;
+    padding: 9px 0;
 
 }
 
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    
+    padding: 2rem0 0;
+    background: #282727;
     text-align: center;
+    color: #fff;
 }
 
 header h1 {
@@ -181,10 +186,10 @@ header nav ul li a {
 }
 
 .hero {
-    padding: 2rem;
-    text-align: center;
     background: #e4f1fe;
     color: #333;
+    padding: 2rem;
+    text-align: center;
 }
 
 .resources {
