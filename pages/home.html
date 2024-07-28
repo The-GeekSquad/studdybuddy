@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Hub</title>
     <link rel="stylesheet" href="../styles.css">
+
 </head>
 <body>
     <header>
@@ -16,6 +17,7 @@
                 <li><a href="#">Resources</a></li>
                 <li><a href="#">Tips</a></li>
                 <li><a href="#">About</a></li>
+                <li><button id="openLoginBtn">Login/Signup</button></li>
             </ul>
         </nav>
     </header>
@@ -41,16 +43,53 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
+    <!-- Login/Signup Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeLoginBtn">&times;</span>
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Login')">Login</button>
+                <button class="tablinks" onclick="openTab(event, 'Signup')">Signup</button>
+            </div>
+            <div id="Login" class="tabcontent">
+                <h2>Login</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="loginUsername">Username</label>
+                        <input type="text" id="loginUsername" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+            </div>
+            <div id="Signup" class="tabcontent">
+                <h2>Signup</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="signupUsername">Username</label>
+                        <input type="text" id="signupUsername" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" name="password" required>
+                    </div>
+                    <button type="submit" class="signup-btn">Signup</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Study Hub. All rights reserved.</p>
     </footer>
+
+    <script src="../scripts/loginthing.js"></script>
 </body>
 </html>
