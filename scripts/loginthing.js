@@ -4,41 +4,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginModal = document.getElementById('loginModal');
     const tabLinks = document.querySelectorAll('.tablinks');
     const tabContents = document.querySelectorAll('.tabcontent');
-
-    // Open modal
+    
     openLoginBtn.addEventListener('click', () => {
         loginModal.style.display = 'block';
     });
 
-    // Close modal
     closeLoginBtn.addEventListener('click', () => {
         loginModal.style.display = 'none';
     });
 
-    // Close modal when clicking outside of it
     window.addEventListener('click', (event) => {
         if (event.target === loginModal) {
             loginModal.style.display = 'none';
         }
     });
 
-    // Tab switching
-    tabLinks.forEach(tabLink => {
-        tabLink.addEventListener('click', (event) => {
-            tabContents.forEach(tabContent => {
-                tabContent.classList.remove('active');
-            });
-
-            tabLinks.forEach(tabLink => {
-                tabLink.classList.remove('active');
-            });
-
-            document.getElementById(event.target.textContent).classList.add('active');
-            event.currentTarget.classList.add('active');
+    tabLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            tabContents.forEach(content => content.style.display = 'none');
+            tabLinks.forEach(link => link.className = link.className.replace(" active", ""));
+            const activeTab = document.getElementById(event.target.textContent);
+            if (activeTab) activeTab.style.display = 'block';
+            event.currentTarget.className += " active";
         });
     });
 
-    // Default to showing the login tab content
-    document.getElementById('Login').classList.add('active');
-    document.querySelector('.tablinks:first-of-type').classList.add('active');
+    document.getElementById('login-form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        // Handle login form submission
+    });
+
+    document.getElementById('signup-form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        // Handle signup form submission
+    });
 });
