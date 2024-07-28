@@ -50,6 +50,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/loginSignUpPasswordReset.js":
+/*!*****************************************!*\
+  !*** ./src/loginSignUpPasswordReset.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ \"./src/index.js\");\n\n\nvar auth = _index__WEBPACK_IMPORTED_MODULE_0__.auth;\n\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n    let loginForm = document.getElementById('login-form');\n    let signUpForm = document.getElementById('signup-form');\n    let passResetForm = document.getElementById('pass-reset-form');\n        \n    if (loginForm) {\n        loginForm.addEventListener('submit', () => {\n            let formData = new FormData(loginForm);\n            \n            _index__WEBPACK_IMPORTED_MODULE_0__.loginEmailPass(formData.get('email'), formData.get('password'));\n        });\n    }\n    \n    if (signUpForm) {\n        signUpForm.addEventListener('submit', () => {\n            let formData = new FormData(signUpForm);\n            \n            _index__WEBPACK_IMPORTED_MODULE_0__.signUpEmailPass(formData.get('email'), formData.get('password'));\n        });\n    }\n\n    if (passResetForm) {\n        passResetForm.addEventListener('submit', () => {\n            let formData = new FormData(passResetForm);\n            \n            _index__WEBPACK_IMPORTED_MODULE_0__.resetPassword(formData.get('email'));\n        });\n    }\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvbG9naW5TaWduVXBQYXNzd29yZFJlc2V0LmpzIiwibWFwcGluZ3MiOiI7O0FBQWlDOztBQUVqQyxXQUFXLHdDQUFVOztBQUVyQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxZQUFZLGtEQUFvQjtBQUNoQyxTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsWUFBWSxtREFBcUI7QUFDakMsU0FBUztBQUNUOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsWUFBWSxpREFBbUI7QUFDL0IsU0FBUztBQUNUO0FBQ0EsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3N0dWRkeWJ1ZGR5Ly4vc3JjL2xvZ2luU2lnblVwUGFzc3dvcmRSZXNldC5qcz9jNWZmIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIEluZGV4IGZyb20gJy4vaW5kZXgnO1xuXG52YXIgYXV0aCA9IEluZGV4LmF1dGg7XG5cbmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoXCJET01Db250ZW50TG9hZGVkXCIsIGZ1bmN0aW9uKCkge1xuICAgIGxldCBsb2dpbkZvcm0gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnbG9naW4tZm9ybScpO1xuICAgIGxldCBzaWduVXBGb3JtID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3NpZ251cC1mb3JtJyk7XG4gICAgbGV0IHBhc3NSZXNldEZvcm0gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncGFzcy1yZXNldC1mb3JtJyk7XG4gICAgICAgIFxuICAgIGlmIChsb2dpbkZvcm0pIHtcbiAgICAgICAgbG9naW5Gb3JtLmFkZEV2ZW50TGlzdGVuZXIoJ3N1Ym1pdCcsICgpID0+IHtcbiAgICAgICAgICAgIGxldCBmb3JtRGF0YSA9IG5ldyBGb3JtRGF0YShsb2dpbkZvcm0pO1xuICAgICAgICAgICAgXG4gICAgICAgICAgICBJbmRleC5sb2dpbkVtYWlsUGFzcyhmb3JtRGF0YS5nZXQoJ2VtYWlsJyksIGZvcm1EYXRhLmdldCgncGFzc3dvcmQnKSk7XG4gICAgICAgIH0pO1xuICAgIH1cbiAgICBcbiAgICBpZiAoc2lnblVwRm9ybSkge1xuICAgICAgICBzaWduVXBGb3JtLmFkZEV2ZW50TGlzdGVuZXIoJ3N1Ym1pdCcsICgpID0+IHtcbiAgICAgICAgICAgIGxldCBmb3JtRGF0YSA9IG5ldyBGb3JtRGF0YShzaWduVXBGb3JtKTtcbiAgICAgICAgICAgIFxuICAgICAgICAgICAgSW5kZXguc2lnblVwRW1haWxQYXNzKGZvcm1EYXRhLmdldCgnZW1haWwnKSwgZm9ybURhdGEuZ2V0KCdwYXNzd29yZCcpKTtcbiAgICAgICAgfSk7XG4gICAgfVxuXG4gICAgaWYgKHBhc3NSZXNldEZvcm0pIHtcbiAgICAgICAgcGFzc1Jlc2V0Rm9ybS5hZGRFdmVudExpc3RlbmVyKCdzdWJtaXQnLCAoKSA9PiB7XG4gICAgICAgICAgICBsZXQgZm9ybURhdGEgPSBuZXcgRm9ybURhdGEocGFzc1Jlc2V0Rm9ybSk7XG4gICAgICAgICAgICBcbiAgICAgICAgICAgIEluZGV4LnJlc2V0UGFzc3dvcmQoZm9ybURhdGEuZ2V0KCdlbWFpbCcpKTtcbiAgICAgICAgfSk7XG4gICAgfVxufSk7Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/loginSignUpPasswordReset.js\n");
+
+/***/ }),
+
 /***/ "./node_modules/@firebase/app/dist/esm/index.esm2017.js":
 /*!**************************************************************!*\
   !*** ./node_modules/@firebase/app/dist/esm/index.esm2017.js ***!
@@ -202,7 +212,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/loginSignUpPasswordReset.js");
 /******/ 	
 /******/ })()
 ;

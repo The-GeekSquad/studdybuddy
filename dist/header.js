@@ -40,6 +40,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/header.js":
+/*!***********************!*\
+  !*** ./src/header.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ \"./src/index.js\");\n\n\nvar auth = _index__WEBPACK_IMPORTED_MODULE_0__.auth;\n\n_index__WEBPACK_IMPORTED_MODULE_0__.onAuthStateChanged(auth, (user) => {\n    let elementsIn = document.getElementsByClassName('logged-in');\n    let elementsOut = document.getElementsByClassName('logged-out');\n\n    for(let i = 0; i < elementsIn.length; i++) {\n        elementsIn[i].style.display = user ? \"inline\" : \"none\";\n    }\n    for(let i = 0; i < elementsOut.length; i++) {\n        elementsOut[i].style.display = user ? \"none\" : \"inline\";\n    }\n});\n\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n    let logOutButton = document.getElementById('logout-button');\n\n    if (logOutButton) {\n        logOutButton.addEventListener('click', () => {\n            _index__WEBPACK_IMPORTED_MODULE_0__.signOut(auth).then(() => {\n                window.location.href = '../Index.html';\n            }).catch((error) => {\n                console.log(error);\n            });\n        });\n    }\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaGVhZGVyLmpzIiwibWFwcGluZ3MiOiI7O0FBQWlDOztBQUVqQyxXQUFXLHdDQUFVOztBQUVyQixzREFBd0I7QUFDeEI7QUFDQTs7QUFFQSxtQkFBbUIsdUJBQXVCO0FBQzFDO0FBQ0E7QUFDQSxtQkFBbUIsd0JBQXdCO0FBQzNDO0FBQ0E7QUFDQSxDQUFDOztBQUVEO0FBQ0E7O0FBRUE7QUFDQTtBQUNBLFlBQVksMkNBQWE7QUFDekI7QUFDQSxhQUFhO0FBQ2I7QUFDQSxhQUFhO0FBQ2IsU0FBUztBQUNUO0FBQ0EsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3N0dWRkeWJ1ZGR5Ly4vc3JjL2hlYWRlci5qcz8xMTYxIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIEluZGV4IGZyb20gJy4vaW5kZXgnO1xuXG52YXIgYXV0aCA9IEluZGV4LmF1dGg7XG5cbkluZGV4Lm9uQXV0aFN0YXRlQ2hhbmdlZChhdXRoLCAodXNlcikgPT4ge1xuICAgIGxldCBlbGVtZW50c0luID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeUNsYXNzTmFtZSgnbG9nZ2VkLWluJyk7XG4gICAgbGV0IGVsZW1lbnRzT3V0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeUNsYXNzTmFtZSgnbG9nZ2VkLW91dCcpO1xuXG4gICAgZm9yKGxldCBpID0gMDsgaSA8IGVsZW1lbnRzSW4ubGVuZ3RoOyBpKyspIHtcbiAgICAgICAgZWxlbWVudHNJbltpXS5zdHlsZS5kaXNwbGF5ID0gdXNlciA/IFwiaW5saW5lXCIgOiBcIm5vbmVcIjtcbiAgICB9XG4gICAgZm9yKGxldCBpID0gMDsgaSA8IGVsZW1lbnRzT3V0Lmxlbmd0aDsgaSsrKSB7XG4gICAgICAgIGVsZW1lbnRzT3V0W2ldLnN0eWxlLmRpc3BsYXkgPSB1c2VyID8gXCJub25lXCIgOiBcImlubGluZVwiO1xuICAgIH1cbn0pO1xuXG5kb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKFwiRE9NQ29udGVudExvYWRlZFwiLCBmdW5jdGlvbigpIHtcbiAgICBsZXQgbG9nT3V0QnV0dG9uID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2xvZ291dC1idXR0b24nKTtcblxuICAgIGlmIChsb2dPdXRCdXR0b24pIHtcbiAgICAgICAgbG9nT3V0QnV0dG9uLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4ge1xuICAgICAgICAgICAgSW5kZXguc2lnbk91dChhdXRoKS50aGVuKCgpID0+IHtcbiAgICAgICAgICAgICAgICB3aW5kb3cubG9jYXRpb24uaHJlZiA9ICcuLi9JbmRleC5odG1sJztcbiAgICAgICAgICAgIH0pLmNhdGNoKChlcnJvcikgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKGVycm9yKTtcbiAgICAgICAgICAgIH0pO1xuICAgICAgICB9KTtcbiAgICB9XG59KTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/header.js\n");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -202,7 +212,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/header.js");
 /******/ 	
 /******/ })()
 ;
