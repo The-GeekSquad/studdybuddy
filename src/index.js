@@ -1,5 +1,11 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth,
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+    sendPasswordResetEmail,
+    signOut,
+    onAuthStateChanged
+} from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDQTa3ulEe5m9LgPZfhnreCPH00UpfKT04",
@@ -26,7 +32,7 @@ function loginEmailPass(email, password) {
         document.getElementById('error').innerText = errorMessage;
     });
 }
-    
+
 function signUpEmailPass(email, password) {
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
@@ -98,3 +104,5 @@ onAuthStateChanged(auth, (user) => {
         elementsOut[i].style.display = user ? "none" : "inline";
     }
 });
+
+export { app, auth, onAuthStateChanged };
