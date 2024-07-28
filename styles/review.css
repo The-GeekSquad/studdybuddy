@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.maincontainer{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    top: 50%;
+    left: 40%;
+    transform: translate(-20%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.thecard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    
+}
+
+.thecard:active{
+    transform: rotateY(180deg);
+
+}
+
+.thefront{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #71716e;
+    color: #f7f7f7;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+
+
+}
+
+.theback{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #ffffff;
+    color: #333;
+    transform: rotateY(180deg);
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+
+
+
+}
+
+.container .box-container .box .btn{
+    margin-top: 10px;
+    display: inline-block;
+    background: #333;
+    color: #494646;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px 25px;
+
+}
+
+.container .box-container .box .btn:hover{
+    letter-spacing: 1px;
+}
+
+.container .box-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+    transform: scale(1.03);
+}
+
+
+.button {
+    display: inline-flex;
+    height: 40px;
+    padding: 0;
+    background: #848181;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    
+
+
+}
+
+.button1 {
+    display: inline-flex;
+    height: 40px;
+    padding: 0;
+    background: #73e12e;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    top: 50%;
+    left: 40%;
+    transform: translate(260%, 900%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.button2 {
+    display: inline-flex;
+    height: 40px;
+    padding: 0;
+    background: #e1492e;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    top: 50%;
+    left: 40%;
+    transform: translate(500%, 800%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.button:hover{
+    background: #656262;
+    letter-spacing: 1px;
+    transform: scale(1.03);
+
+}
+
+.button:active{
+    background: #787575
+
+}
+
+.button1:hover{
+    background: #7eb453;
+    letter-spacing: 1px;
+    transform: scale(1.03);
+    top: 50%;
+    left: 40%;
+    transform: translate(260%, 900%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.button1:active{
+    background: #787575
+    
+
+}
+
+.button2:hover{
+    background: #e68d8d;
+    letter-spacing: 1px;
+    transform: scale(1.03);
+    top: 50%;
+    left: 40%;
+    transform: translate(500%, 800%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.button2:active{
+    background: #787575
+
+}
+
+
+.button__text, .button__icon{
+    display:inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: #000000;
+    height: 100%;
+
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 2rem;
+    text-align: center;
+    background: #e4f1fe;
+    color: #333;
+}
+
+.resources {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.resource-item {
+    background: #fff;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
