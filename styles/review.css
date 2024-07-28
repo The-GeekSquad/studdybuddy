@@ -101,7 +101,14 @@ header nav ul li a {
     min-width: 200px;
     max-width: 300px;
 }
- .button1, .button2{
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button1, .button2 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +120,8 @@ header nav ul li a {
     font-weight: 500;
     cursor: pointer;
     transition: transform 0.3s ease, background 0.3s ease;
- }
+    margin: 0 10px; /* Add margin between buttons if needed */
+}
 .button {
     display: inline-flex;
     justify-content: center;
