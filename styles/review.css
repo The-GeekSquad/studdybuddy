@@ -184,7 +184,7 @@ body {
     transform: scale(1.03);
     top: 50%;
     left: 40%;
-    transform: translate(500%, 800%);
+    transform: translate(500%, 1100%);
     display: flex;
     justify-content: center;
     align-items: center;
