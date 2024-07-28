@@ -17,10 +17,10 @@ const firebaseConfig = {
     measurementId: "G-JHG92J4V37"
   };
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
+export const app = initializeApp(firebaseConfig);
+export const auth = getAuth();
 
-function loginEmailPass(email, password) {
+export function loginEmailPass(email, password) {
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         const user = userCredential.user;
@@ -33,7 +33,7 @@ function loginEmailPass(email, password) {
     });
 }
 
-function signUpEmailPass(email, password) {
+export function signUpEmailPass(email, password) {
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         const user = userCredential.user;
@@ -46,7 +46,7 @@ function signUpEmailPass(email, password) {
     });
 }
 
-function resetPassword(email) {
+export function resetPassword(email) {
     sendPasswordResetEmail(auth, email)
     .then(() => {
         document.getElementById('error').innerText = "We've sent you a confirmation email. Please check spam and junk mailboxes too!";
@@ -57,52 +57,8 @@ function resetPassword(email) {
         document.getElementById('error').innerText = errorMessage;
     });
 }
-    
-document.addEventListener("DOMContentLoaded", function() {
-    let loginForm = document.getElementById('login-form');
-    let signUpForm = document.getElementById('signup-form');
-    let passResetForm = document.getElementById('pass-reset-form');
-    let logOutButton = document.getElementById('logout-button');
-        
-    if (loginForm) {
-        loginForm.addEventListener('submit', () => {
-            let formData = new FormData(loginForm);
-            
-            loginEmailPass(formData.get('email'), formData.get('password'));
-        });
-    }
-    
-    if (signUpForm) {
-        signUpForm.addEventListener('submit', () => {
-            let formData = new FormData(signUpForm);
-            
-            signUpEmailPass(formData.get('email'), formData.get('password'));
-        });
-    }
 
-    if (passResetForm) {
-        passResetForm.addEventListener('submit', () => {
-            let formData = new FormData(passResetForm);
-            
-            resetPassword(formData.get('email'));
-        });
-    }
-    
-    if (logOutButton) {
-        logOutButton.addEventListener('click', () => {auth.signOut()});
-    }
-});
-    
-onAuthStateChanged(auth, (user) => {
-    let elementsIn = document.getElementsByClassName('logged-in');
-    let elementsOut = document.getElementsByClassName('logged-out');
-
-    for(let i = 0; i < elementsIn.length; i++) {
-        elementsIn[i].style.display = user ? "inline" : "none";
-    }
-    for(let i = 0; i < elementsOut.length; i++) {
-        elementsOut[i].style.display = user ? "none" : "inline";
-    }
-});
-
-export { app, auth, onAuthStateChanged };
+export {
+    onAuthStateChanged,
+    signOut
+};
