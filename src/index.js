@@ -8,7 +8,9 @@ import { getAuth,
 } from "firebase/auth";
 import {
     getFirestore,
+    doc,
     addDoc,
+    getDoc,
     getDocs,
     collection,
 } from "firebase/firestore";
@@ -62,7 +64,9 @@ export function resetPassword(email) {
 export {
     onAuthStateChanged,
     signOut,
+    doc,
     addDoc,
+    getDoc,
     getDocs,
     collection
 };
