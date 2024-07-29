@@ -1,56 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="../dist/header.js"></script>
+<script src="../dist/loginSignUpPasswordReset.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login and Signup Pop-up</title>
-    <link rel="stylesheet" href="../styles/loginthing.css">
+    <title>Study Hub</title>
+    <link rel="stylesheet" href="../styles/login-signup.css">
+    <link rel="stylesheet" href="../styles/head.css">
 </head>
 <body>
-    <button id="openLoginBtn">Login</button>
-
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" id="closeLoginBtn">&times;</span>
-            <div class="tab">
-                <button class="tablinks" id="loginTab" onclick="openTab(event, 'Login')">Login</button>
-                <button class="tablinks" id="signupTab" onclick="openTab(event, 'Signup')">Signup</button>
-            </div>
-            <div id="Login" class="tabcontent">
-                <h2>Login</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="loginUsername">Username</label>
-                        <input type="text" id="loginUsername" name="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="loginPassword">Password</label>
-                        <input type="password" id="loginPassword" name="password" required>
-                    </div>
-                    <button type="submit" class="login-btn">Login</button>
-                </form>
-            </div>
-            <div id="Signup" class="tabcontent">
-                <h2>Signup</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="signupUsername">Username</label>
-                        <input type="text" id="signupUsername" name="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="signupEmail">Email</label>
-                        <input type="email" id="signupEmail" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="signupPassword">Password</label>
-                        <input type="password" id="signupPassword" name="password" required>
-                    </div>
-                    <button type="submit" class="signup-btn">Signup</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <script src="../scripts/loginthing.js"></script>
+    <header>
+        <h1>Study Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="../Index.html">Home</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Tips</a></li>
+                <li><a href="#">About</a></li>
+                <li class="logged-in">
+                    <a href="#">Account</a>
+                </li>
+                <li class="logged-in">
+                    <a href="#" id="logout-button">Logout</a>
+                </li>
+                <li class="logged-out">
+                    <a href="./login.html">Login</a>
+                </li>
+                <li class="logged-out">
+                    <a href="./signup.html">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="login-text">
+        <h2>Login</h2>
+        <form id="login-form" class="login-form" onsubmit="return false;">
+            <input class="login-field" name="email" type="email" placeholder="Email" required>
+            <input class="login-field" name="password" type="password" placeholder="Password (min 8 chars)" required minlength="8">
+            <input class="login-field" type="submit" value="Login">
+        </form>
+        <a href="./signup.html" class="signup-link">New? Sign up here!</a>
+        
+        <br>
+        <a href="./passwordReset.html" class="signup-link">Forgot password</a>
+        
+        <p class="error" id="error"></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Study Hub. All rights reserved.</p>
+    </footer>
 </body>
 </html>

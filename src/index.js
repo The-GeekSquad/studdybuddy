@@ -20,15 +20,6 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 
-function setError(message) {
-    const errorElement = document.getElementById('error');
-    if (errorElement) {
-        errorElement.innerText = message;
-    } else {
-        console.error("Error element not found.");
-    }
-}
-
 export function loginEmailPass(email, password) {
     signInWithEmailAndPassword(auth, email, password)
         .then(() => {
@@ -51,12 +42,14 @@ export function signUpEmailPass(email, password) {
 
 export function resetPassword(email) {
     sendPasswordResetEmail(auth, email)
-        .then(() => {
-            setError("We've sent you a confirmation email. Please check spam and junk mailboxes too!");
-        })
-        .catch((error) => {
-            setError(error.message);
-        });
+    .then(() => {
+        document.getElementById('error').innerText = "We've sent you a confirmation email. Please check spam and junk mailboxes too!";
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        document.getElementById('error').innerText = errorMessage;
+    });
 }
 
 export {
