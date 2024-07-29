@@ -5,6 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Study Hub</title>
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Basic styles for the modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button.active {
+            background-color: #ddd;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border-top: none;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,92 +114,57 @@
         <p>Combine learning with fun! Access educational games and resources to boost your knowledge while enjoying your time.</p>
     </section>
 
-    <section id="games" class="games">
-        <h2>Educational Games</h2>
-        <div class="game-item">
-            <h3>Math Quiz</h3>
-            <p>Sharpen your math skills with challenging quizzes.</p>
-            <button>Play Now</button>
-        </div>
-        <div class="game-item">
-            <h3>Science Adventure</h3>
-            <p>Explore the world of science through interactive games.</p>
-            <button>Play Now</button>
-        </div>
-        <div class="game-item">
-            <h3>History Challenge</h3>
-            <p>Test your knowledge of historical events and figures.</p>
-            <button>Play Now</button>
-        </div>
-    </section>
-
-    <section id="resources" class="resources">
-        <h2>Study Resources</h2>
-        <div class="resource-item">
-            <h3>Articles</h3>
-            <p>Read articles on various educational topics.</p>
-            <button>Explore</button>
-        </div>
-        <div class="resource-item">
-            <h3>Tutorials</h3>
-            <p>Watch tutorials to understand complex concepts.</p>
-            <button>Watch</button>
-        </div>
-        <div class="resource-item">
-            <h3>Practice Exercises</h3>
-            <p>Practice exercises to reinforce your learning.</p>
-            <button>Practice</button>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Game Study Hub. All rights reserved.</p>
-    </footer>
-
-    <!-- Login/Signup Modal -->
+    <!-- Login/Signup/Reset Modal -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeLoginBtn">&times;</span>
             <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'Login')">Login</button>
-                <button class="tablinks" onclick="openTab(event, 'Signup')">Signup</button>
+                <button class="tablinks" data-tab="Login">Login</button>
+                <button class="tablinks" data-tab="Signup">Signup</button>
+                <button class="tablinks" data-tab="Reset">Reset Password</button>
             </div>
             <div id="Login" class="tabcontent">
                 <h2>Login</h2>
                 <form id="login-form">
                     <div class="form-group">
-                        <label for="loginUsername">Username</label>
-                        <input type="text" id="loginUsername" name="username" required>
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" name="email" required autocomplete="email">
                     </div>
                     <div class="form-group">
                         <label for="loginPassword">Password</label>
-                        <input type="password" id="loginPassword" name="password" required>
+                        <input type="password" id="loginPassword" name="password" required autocomplete="current-password">
                     </div>
-                    <button type="submit" class="login-btn">Login</button>
+                    <button type="submit" class="btn">Login</button>
                 </form>
             </div>
             <div id="Signup" class="tabcontent">
                 <h2>Signup</h2>
                 <form id="signup-form">
                     <div class="form-group">
-                        <label for="signupUsername">Username</label>
-                        <input type="text" id="signupUsername" name="username" required>
-                    </div>
-                    <div class="form-group">
                         <label for="signupEmail">Email</label>
-                        <input type="email" id="signupEmail" name="email" required>
+                        <input type="email" id="signupEmail" name="email" required autocomplete="email">
                     </div>
                     <div class="form-group">
                         <label for="signupPassword">Password</label>
-                        <input type="password" id="signupPassword" name="password" required>
+                        <input type="password" id="signupPassword" name="password" required autocomplete="new-password">
                     </div>
-                    <button type="submit" class="signup-btn">Signup</button>
+                    <button type="submit" class="btn">Signup</button>
+                </form>
+            </div>
+            <div id="Reset" class="tabcontent">
+                <h2>Reset Password</h2>
+                <form id="pass-reset-form">
+                    <div class="form-group">
+                        <label for="resetEmail">Email</label>
+                        <input type="email" id="resetEmail" name="email" required autocomplete="email">
+                    </div>
+                    <button type="submit" class="btn">Reset Password</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <script type="module" src="../scripts/loginthing.js"></script>
-    <script type="module" src="../src/loginSignUpPasswordReset.js"></script>
+    <script src="../src/index.js" type="module"></script>
+    <script src="../scripts/loginthing.js" type="module"></script>
 </body>
 </html>

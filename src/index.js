@@ -20,42 +20,43 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 
+function setError(message) {
+    const errorElement = document.getElementById('error');
+    if (errorElement) {
+        errorElement.innerText = message;
+    } else {
+        console.error("Error element not found.");
+    }
+}
+
 export function loginEmailPass(email, password) {
     signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        const user = userCredential.user;
-        window.location.href = '../Index.html';
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        document.getElementById('error').innerText = errorMessage;
-    });
+        .then(() => {
+            window.location.href = '../Index.html';
+        })
+        .catch((error) => {
+            setError(error.message);
+        });
 }
 
 export function signUpEmailPass(email, password) {
     createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        const user = userCredential.user;
-        loginEmailPass(email, password);
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        document.getElementById('error').innerText = errorMessage;
-    });
+        .then(() => {
+            loginEmailPass(email, password);
+        })
+        .catch((error) => {
+            setError(error.message);
+        });
 }
 
 export function resetPassword(email) {
     sendPasswordResetEmail(auth, email)
-    .then(() => {
-        document.getElementById('error').innerText = "We've sent you a confirmation email. Please check spam and junk mailboxes too!";
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        document.getElementById('error').innerText = errorMessage;
-    });
+        .then(() => {
+            setError("We've sent you a confirmation email. Please check spam and junk mailboxes too!");
+        })
+        .catch((error) => {
+            setError(error.message);
+        });
 }
 
 export {
