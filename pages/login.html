@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="../dist/index.js"></script>
-
+<script src="../dist/header.js"></script>
+<script src="../dist/loginSignUpPasswordReset.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="../Index.html">Home</a></li>
                 <li><a href="#">Resources</a></li>
-                <li><a href="../pages/tipsPage.html">Tips</a></li>
+                <li><a href="#">Tips</a></li>
                 <li><a href="#">About</a></li>
                 <li class="logged-in">
                     <a href="#">Account</a>
@@ -33,25 +33,20 @@
             </ul>
         </nav>
     </header>
-
     <section class="login-text">
         <h2>Login</h2>
-
         <form id="login-form" class="login-form" onsubmit="return false;">
             <input class="login-field" name="email" type="email" placeholder="Email" required>
             <input class="login-field" name="password" type="password" placeholder="Password (min 8 chars)" required minlength="8">
             <input class="login-field" type="submit" value="Login">
         </form>
-
         <a href="./signup.html" class="signup-link">New? Sign up here!</a>
         
         <br>
-
         <a href="./passwordReset.html" class="signup-link">Forgot password</a>
         
         <p class="error" id="error"></p>
     </section>
-
     <footer>
         <p>&copy; 2024 Study Hub. All rights reserved.</p>
     </footer>

@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -20,6 +21,7 @@ header h1 {
 header nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 header nav ul li {
@@ -40,23 +42,21 @@ header nav ul li a {
 }
 
 .maincontainer {
-    position: relative;
-    width: 400px;
-    height: 250px;
-    top: 50%;
-    left: 40%;
-    transform: translate(-20%, 0%);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    max-width: 400px;
+    height: 250px;
+    margin: 2rem auto;
+    position: relative;
 }
 
 .thecard {
-    position: absolute;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 .thecard:active {
@@ -68,7 +68,9 @@ header nav ul li a {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
@@ -86,10 +88,10 @@ header nav ul li a {
 }
 
 .resources {
-    padding: 2rem;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
 }
 
 .resource-item {
@@ -97,7 +99,7 @@ header nav ul li a {
     padding: 1rem;
     margin: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
+    flex: 1 1 30%;
     min-width: 200px;
     max-width: 300px;
 }
@@ -108,7 +110,7 @@ header nav ul li a {
     align-items: center;
 }
 
-.button1, .button2 {
+.button1, .button2, .button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -120,22 +122,10 @@ header nav ul li a {
     font-weight: 500;
     cursor: pointer;
     transition: transform 0.3s ease, background 0.3s ease;
-    margin: 0 10px; /* Add margin between buttons if needed */
-}
-.button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    padding: 0 16px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
+    margin: 1rem 0.5rem;
 }
 
+/* Specific Button Styles */
 .button {
     background: #848181;
     color: #fff;
@@ -191,7 +181,24 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
+    position: relative;
     width: 100%;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .maincontainer {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .resource-item {
+        flex: 1 1 100%;
+        margin: 0.5rem 0;
+    }
+
+    .button1, .button2, .button {
+        margin: 0.5rem;
+    }
 }

@@ -22,28 +22,22 @@ export const auth = getAuth();
 
 export function loginEmailPass(email, password) {
     signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        const user = userCredential.user;
-        window.location.href = '../Index.html';
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        document.getElementById('error').innerText = errorMessage;
-    });
+        .then(() => {
+            window.location.href = '../Index.html';
+        })
+        .catch((error) => {
+            setError(error.message);
+        });
 }
 
 export function signUpEmailPass(email, password) {
     createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        const user = userCredential.user;
-        loginEmailPass(email, password);
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        document.getElementById('error').innerText = errorMessage;
-    });
+        .then(() => {
+            loginEmailPass(email, password);
+        })
+        .catch((error) => {
+            setError(error.message);
+        });
 }
 
 export function resetPassword(email) {
