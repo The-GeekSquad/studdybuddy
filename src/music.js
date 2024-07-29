@@ -7,7 +7,7 @@ const summerAudio = new Audio('../assets/summer-rain-lofi-vibes-216043.mp3');
 const prevBtn = document.getElementById('previous');
 const playBtn = document.getElementById('play-pause');
 const nextBtn = document.getElementById('next');
-const songName = document.getElementsByClassName('song-name');
+const songName = document.getElementsByClassName('song-name')[0];
 
 const songs = [
     { ele: dreamAudio, audioName: 'Dream Lofi Vibes'},
