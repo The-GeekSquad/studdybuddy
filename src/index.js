@@ -10,6 +10,7 @@ import {
     getFirestore,
     doc,
     addDoc,
+    setDoc,
     getDoc,
     getDocs,
     collection,
@@ -66,6 +67,7 @@ export {
     signOut,
     doc,
     addDoc,
+    setDoc,
     getDoc,
     getDocs,
     collection
