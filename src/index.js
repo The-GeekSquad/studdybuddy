@@ -6,7 +6,12 @@ import { getAuth,
     signOut,
     onAuthStateChanged
 } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import {
+    getFirestore,
+    addDoc,
+    getDocs,
+    collection,
+} from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDQTa3ulEe5m9LgPZfhnreCPH00UpfKT04",
@@ -56,5 +61,8 @@ export function resetPassword(email) {
 
 export {
     onAuthStateChanged,
-    signOut
+    signOut,
+    addDoc,
+    getDocs,
+    collection
 };
