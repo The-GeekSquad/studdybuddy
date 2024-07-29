@@ -6,6 +6,7 @@ import { getAuth,
     signOut,
     onAuthStateChanged
 } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDQTa3ulEe5m9LgPZfhnreCPH00UpfKT04",
@@ -19,6 +20,7 @@ const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
+export const db = getFirestore(app);
 
 export function loginEmailPass(email, password) {
     signInWithEmailAndPassword(auth, email, password)
