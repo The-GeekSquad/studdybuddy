@@ -7,6 +7,7 @@ const summerAudio = new Audio('../assets/summer-rain-lofi-vibes-216043.mp3');
 const prevBtn = document.getElementById('previous');
 const playBtn = document.getElementById('play-pause');
 const nextBtn = document.getElementById('next');
+const playPauseIcon = document.querySelector('#play-pause')
 const songName = document.getElementsByClassName('song-name')[0];
 
 const songs = [
@@ -24,8 +25,55 @@ songName.textContent = songs[current].audioName;
 
 document.addEventListener("DOMContentLoaded", function() {
     playBtn.addEventListener('click', ()=> {
-        currentSong.play();
+        
+        if (currentSong.paused){
+            currentSong.play();
+            playPauseIcon.children[0].className = 'ph ph-pause';
+
+        } else{
+            currentSong.pause();
+            playPauseIcon.children[0].className = 'ph ph-play';
+
+        }
     })
+
+    
 });
 
+nextBtn.addEventListener('click', () => {
+    updateSong('next');
+    playPauseSong();
+  });
+  
+  prevBtn.addEventListener('click', () => {
+    updateSong('prev');
+    playPauseSong();
+  });
+  
+  const updateSong = (action)=> {
+    currentSong.pause();
+    currentSong.currentTime = 0;
+  
+    if(action === 'next'){
+      current++;
+      if(current > songs.length -1) current = 0;
+    }
+    if(action === 'prev'){
+      current--;
+      if(current < 0) current = songs.length - 1;
+    }
+    currentSong = songs[current].ele;
+    songName.textContent = songs[current].audioName;
+  }
+  
+  const playPauseSong = ()=> {
+    if(currentSong.paused){
+      currentSong.play();
+      playPauseIcon.children[0].className = 'ph-bold ph-pause';
+    }
+    else {
+      currentSong.pause();
+      playPauseIcon.children[0].className = 'ph-bold ph-play';
+    }
+  }
 
