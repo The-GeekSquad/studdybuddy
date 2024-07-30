@@ -13,6 +13,7 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="../styles/music.css">
     <script src="../src/music.js" defer></script>
+    <script src="../src/stopwatch.js" defer></script>
 </head>
 <body>
     
@@ -21,7 +22,7 @@
         <nav>
             <ul>
                 <li><a href="/pages/home.html">Home</a></li>
-                <li><a href="/pages/timer.html">Study Time</a></li>
+                <li><a href="/pages/studyTime.html">Study Time</a></li>
                 <li><a href="/pages/review.html">Review</a></li>
                 <li><a href="/pages/tipsPage.html">Tips</a></li>
                 <li><a href="/pages/aboutUs.html">About</a></li>
@@ -42,76 +43,25 @@
         <p>We will integrate this with one of them</p>
     </section>
 
-    <h2 class ="playing">Now Playing: <span class="song-name"></span></h2>
+    <h2 class="playing">Now Playing: <span class="song-name"></span></h2>
     <div class="controls">
-        <button id= "previous" class="btn previous"><i class="ph ph-skip-back"></i></button>
-        <button id= "play-pause" class="btn play-pause"><i class="ph ph-play"></i></button>
-        <button id= "next" class="btn next"><i class="ph ph-skip-forward"></i></button> 
+        <button id="previous" class="btn previous"><i class="ph ph-skip-back"></i></button>
+        <button id="play-pause" class="btn play-pause"><i class="ph ph-play"></i></button>
+        <button id="next" class="btn next"><i class="ph ph-skip-forward"></i></button> 
     </div>
     <div class="stopwatch"> 
         <h1 id="displayTime">00:00:00</h1>
         <div class="buttons">  
-            <img src="../assets/stop.png" onclick="watchStop()">
             <img src="../assets/start.png" onclick="watchStart()">
-
-
+            <img src="../assets/stop.png" onclick="watchStop()">
+            <img src="../assets/reset.png" onclick="resetWatch()">
         </div>
-
     </div>
 
-    
+
     <footer>
         <p>&copy; 2024 StuddyBuddy. All rights reserved.</p>
     </footer>
-
-    <script>    
-
-        let [seconds, minutes, hours] = [0, 0, 0];
-        let displayTime = document.getElementById("displayTime");
-        let timer = null;
-
-
-        function stopwatch(){
-            seconds++;
-            if(seconds == 60){
-                seconds = 0;
-                minutes++;
-                if(minutes == 60){
-                    minutes = 0;
-                    hours++;
-                }
-
-
-            }
-            let h = hours < 10 ? "0" + hours : hours;
-            let m = minutes < 10 ? "0" + minutes : minutes;
-            let s = seconds < 10 ? "0" + seconds : seconds;
-
-
-
-            displayTime.innerHTML = h + ":" + m + ":" + s;
-
-
-        }
-
-        function watchStart(){
-        if (timer!==null){
-            clearInterval(timer);
-        }
-        timer = setInterval(stopwatch, 1000);
-        }
-
-        function watchStop(){
-            clearInterval(timer);
-    
-        }
-
-
-
-        
-        
-
-    </script>
-
-
 </body>
+</html>
+
