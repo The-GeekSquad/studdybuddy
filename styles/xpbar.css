@@ -12,6 +12,7 @@ body {
     border-radius: 25px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .xp-bar {
@@ -27,4 +28,15 @@ body {
     text-align: center;
     line-height: 30px;
     color: white;
+}
+
+.info {
+    text-align: center;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
