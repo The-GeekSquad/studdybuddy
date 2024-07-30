@@ -28,13 +28,15 @@ const quotes = [{
 }
 ]
 
-let btn = document.querySelector("#Qbtn");
-let quote = document.querySelector(".quote");
-let writer = document.querySelector(".writer");
+document.addEventListener("DOMContentLoaded", function() {
+    let btn = document.querySelector("#Qbtn");
+    let quote = document.querySelector(".quote");
+    let writer = document.querySelector(".writer");
 
-btn.addEventListener("click", function() {
-    let random = Math.floor(Math.random() * quotes.length);
+    btn.addEventListener("click", function() {
+        let random = Math.floor(Math.random() * quotes.length);
 
-    quote.innerHTML = quotes[random].quote;
-    writer.innerHTML = quotes[random].writer;
-})
+        quote.innerHTML = quotes[random].quote;
+        writer.innerHTML = quotes[random].writer;
+    });
+});
