@@ -7,20 +7,45 @@
     <title>Study</title>
     <link rel="stylesheet" href="../styles/menu.css">
     <link rel="stylesheet" href="../styles/timer.css">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="../styles/music.css">
+    <script src="../src/music.js" defer></script>
 </head>
-
 <body>
+    
     <header>
-        <h1>Study Hub</h1>
-        
-        <br>
+        <h1>Game Study Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="/pages/home.html">Home</a></li>
+                <li><a href="/pages/timer.html">Study Time</a></li>
+                <li><a href="/pages/review.html">Review</a></li>
+                <li><a href="/pages/tipsPage.html">Tips</a></li>
+                <li><a href="/pages/aboutUs.html">About</a></li>
+                <li><button id="openLoginBtn">Login/Signup</button></li>
+            </ul>
+        </nav>
     </header>
 
+
+    <audio class="dream" src="../assets/for-a-dream-lofi-vibes-216038.mp3"></audio>
+    <audio class="orchestra" src="../assets/lofi-orchestra-162306.mp3"></audio>
+    <audio class="relax" src="../assets/lofi-relax-travel-by-lofium-123560.mp3"></audio>
+    <audio class="study" src="../assets/lofi-study-112191.mp3"></audio>
+    <audio class="summer" src="../assets/summer-rain-lofi-vibes-216043.mp3"></audio>
+    
     <section class="hero">
         <h2>The timer</h2>
         <p>We will integrate this with one of them</p>
     </section>
 
+    <h2 class ="playing">Now Playing: <span class="song-name"></span></h2>
+    <div class="controls">
+        <button id= "previous" class="btn previous"><i class="ph ph-skip-back"></i></button>
+        <button id= "play-pause" class="btn play-pause"><i class="ph ph-play"></i></button>
+        <button id= "next" class="btn next"><i class="ph ph-skip-forward"></i></button> 
+    </div>
     <div class="stopwatch"> 
         <h1 id="displayTime">00:00:00</h1>
         <div class="buttons">  
@@ -31,6 +56,11 @@
         </div>
 
     </div>
+
+    
+    <footer>
+        <p>&copy; 2024 StuddyBuddy. All rights reserved.</p>
+    </footer>
 
     <script>    
 
