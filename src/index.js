@@ -13,7 +13,9 @@ import {
     setDoc,
     getDoc,
     getDocs,
+    deleteDoc,
     collection,
+    writeBatch
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -29,6 +31,18 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 export const db = getFirestore(app);
+
+export function generateUrlParams(page, paramsObject) {
+    const params = new URLSearchParams();
+    
+    for (const key in paramsObject) {
+        if (paramsObject.hasOwnProperty(key)) {
+            params.append(key, paramsObject[key]);
+        }
+    }
+    
+    return(`${page}?${params.toString()}`);
+}
 
 export function loginEmailPass(email, password) {
     signInWithEmailAndPassword(auth, email, password)
@@ -69,6 +83,8 @@ export {
     addDoc,
     setDoc,
     getDoc,
+    deleteDoc,
     getDocs,
-    collection
+    collection,
+    writeBatch
 };

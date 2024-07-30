@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="../dist/flashcardManager.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -19,15 +20,14 @@
     </header>
 
     <section class="hero">
-        <h2>Welcome to the FlashCard Selector</h2>
-        <p>Here you can choose from your flashcard decks</p>
+        <h2>Flashcards</h2>
     </section>
 
     
 
     <div class="container">
 
-        <button type="button" class="button"> 
+        <button type="button" class="button" id="add-button"> 
             <span class="button__text">Add</span>
             <span class="icon">
                 <ion-icon name="add-outline"></ion-icon>
@@ -36,50 +36,16 @@
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
         
-        <h1 class="heading">Your Projects</h1>
+        <h1 class="heading">Your Decks</h1>
 
-        <div class="box-container">
-
-            <div class="box">
-                <img src="https://www.elkhartpt.com/files/staff/Your_Picture_Here.png" height="200" alt="">
-                <h3>Project 1</h3>
-                <p>Description Here</p>
-                <a href="#" class="btn">Study this</a>
-            </div>
+        <div id="container" class="box-container">
 
             <div class="box">
-                <img src="https://www.elkhartpt.com/files/staff/Your_Picture_Here.png" height="200" alt="">
-                <h3>Project 2</h3>
-                <p>Description Here</p>
-                <a href="#" class="btn">Study this</a>
-            </div>
-
-            <div class="box">
-                <img src="https://www.elkhartpt.com/files/staff/Your_Picture_Here.png" height="200" alt="">
-                <h3>Project 3</h3>
-                <p>Description Here</p>
-                <a href="#" class="btn">Study this</a>
-            </div>
-
-            <div class="box">
-                <img src="https://www.elkhartpt.com/files/staff/Your_Picture_Here.png" height="200" alt="">
-                <h3>Project 4</h3>
-                <p>Description Here</p>
-                <a href="#" class="btn">Study this</a>
-            </div>
-
-            <div class="box">
-                <img src="https://www.elkhartpt.com/files/staff/Your_Picture_Here.png" height="200" alt="">
-                <h3>Project 5</h3>
-                <p>Description Here</p>
-                <a href="#" class="btn">Study this</a>
-            </div>
-
-            <div class="box">
-                <img src="https://www.elkhartpt.com/files/staff/Your_Picture_Here.png" height="200" alt="">
-                <h3>Project 6</h3>
-                <p>Description Here</p>
-                <a href="#" class="btn">Study this</a>
+                <img src="https://www.svgrepo.com/show/35582/inclined-stack-of-cards.svg" height="200" alt="">
+                <h3 class="nameBox">Project 1</h3>
+                <a href="javascript:void" class="review-button">Review</a>
+                <a href="javascript:void" class="edit-button">Edit</a>
+                <a href="javascript:void" class="delete-button" data-confirmed="false">Delete</a>
             </div>
         </div>
 

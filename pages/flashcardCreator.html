@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="../dist/header.js"></script>
+<script src="../dist/flashcardCreator.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hub</title>
+    <link rel="stylesheet" href="../styles/flashcardCreator.css">
+    <link rel="stylesheet" href="../styles/head.css">
+</head>
+<body>
+    <header>
+        <h1>Study Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="../Index.html">Home</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Tips</a></li>
+                <li><a href="#">About</a></li>
+                <li class="logged-in">
+                    <a href="#">Account</a>
+                </li>
+                <li class="logged-in">
+                    <a href="#" id="logout-button">Logout</a>
+                </li>
+                <li class="logged-out">
+                    <a href="./login.html">Login</a>
+                </li>
+                <li class="logged-out">
+                    <a href="./signup.html">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="title">
+        <h2>Flashcard Editor</h2>
+
+        <input id="namebox" placeholder="Name">
+
+        <div id="card-container">
+            <div class="card">
+                <textarea class="cardbox" maxlength="10000" rows="10" placeholder="Question"></textarea>
+                <textarea class="cardbox" maxlength="10000" rows="10" placeholder="Answer"></textarea>
+                <button class="delete-button">Delete</button>
+            </div>
+        </div>
+        <button id="add-card-button">+</button>
+
+        <br>
+
+        <button id="save-button" class="save-button">Save</button>
+        <button id="review-button" class="review-button">Review</button>
+        <button id="done-button" class="done-button">Done</button>
+    </section>
+    <footer>
+        <p>&copy; 2024 Study Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

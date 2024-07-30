@@ -20,10 +20,10 @@
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 0.5s ease;
+    transition: all 0.5s ease;
 }
 
-.thecard:active {
+.thecard.rotated {
     transform: rotateY(180deg);
 }
 
@@ -91,17 +91,17 @@
 
 /* Specific Button Styles */
 .button {
-    background: #848181;
+    background: #383838;
     color: #fff;
 }
 
 .button:hover {
-    background: #656262;
+    background: #979797;
     transform: scale(1.03);
 }
 
 .button:active {
-    background: #787575;
+    background: #dbdbdb;
 }
 
 .button1 {

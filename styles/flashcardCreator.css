@@ -1,0 +1,19 @@
+.title {
+    padding: 2rem;
+    text-align: center;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-family: "Inter", sans-serif;
+}
+
+.cardbox {
+    width: 40%;
+    height: 20%;
+    resize: none;
+}
+
+.done-button {
+    margin-bottom: 20%;
+}
