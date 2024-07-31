@@ -5,8 +5,6 @@ module.exports = {
     entry: {
         'index': './src/index.js',
         'header': './src/header.js',
-        'music': './src/music.js',
-        'stopwatch': './src/stopwatch.js',
         'loginSignUpPasswordReset': './src/loginSignUpPasswordReset.js',
         'flashcardCreator': './src/flashcardCreator.js',
         'flashcardManager': './src/flashcardManager.js',

@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../styles/head.css">
     <link rel="stylesheet" href="../styles/footer.css">
 </head>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="../styles/music.css">
     <script src="../src/music.js" defer></script>
     <script src="../src/stopwatch.js" defer></script>
@@ -82,29 +81,34 @@
         </div>
     </div>
 
-    <audio class="dream" src="../assets/for-a-dream-lofi-vibes-216038.mp3"></audio>
-    <audio class="orchestra" src="../assets/lofi-orchestra-162306.mp3"></audio>
-    <audio class="relax" src="../assets/lofi-relax-travel-by-lofium-123560.mp3"></audio>
-    <audio class="study" src="../assets/lofi-study-112191.mp3"></audio>
-    <audio class="summer" src="../assets/summer-rain-lofi-vibes-216043.mp3"></audio>
-
     <section class="hero">
-        <h2>The timer</h2>
-        <p>We will integrate this with one of them</p>
+        <h2>Welcome to the Study Zone</h2>
     </section>
 
-    <h2 class="playing">Now Playing: <span class="song-name"></span></h2>
-    <div class="controls">
-        <button id="previous" class="btn previous"><i class="ph ph-skip-back"></i></button>
-        <button id="play-pause" class="btn play-pause"><i class="ph ph-play"></i></button>
-        <button id="next" class="btn next"><i class="ph ph-skip-forward"></i></button> 
-    </div>
     <div class="stopwatch"> 
         <h1 id="displayTime">00:00:00</h1>
         <div class="buttons">  
-            <img src="../assets/start.png" onclick="watchStart()">
-            <img src="../assets/stop.png" onclick="watchStop()">
-            <img src="../assets/reset.png" onclick="resetWatch()">
+            <img id="timerStart" style="width: 30px;" src="../assets/play.png">
+            <img id="timerPause" style="width: 30px;" src="../assets/pause.png">
+            <img id="timerReset" style="width: 30px;" src="../assets/stop.png">
+        </div>
+
+        <div class="music-player">
+            <h2 class="playing">Now Playing: <span class="song-name"></span></h2>
+            <div class="controls">
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="100" value="100" class="slider" id="volumeSlider">
+                </div>
+                <button id="previous" class="btn previous">
+                    <img class="btn-image" src="../assets/skip-to-start.png">
+                </button>
+                <button id="play-pause" class="btn play-pause">
+                    <img class="btn-image" src="../assets/play.png">
+                </button>
+                <button id="next" class="btn next">
+                    <img class="btn-image" src="../assets/skip-to-end.png">
+                </button> 
+            </div>
         </div>
     </div>
 

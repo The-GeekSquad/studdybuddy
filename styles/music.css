@@ -6,28 +6,52 @@ body {
     background-color: #f4f4f4;
 }
 
+.music-player {
+    align-self: flex-end;
+    justify-self: flex-end;
+    flex: 1;
+    margin: 10px;
+    margin-bottom: -30px;
+    margin-top: 25px;
+}
+
 .btn {
     background-color: transparent;
     color: gray;
     font-size: 30px;
     border: none;
     cursor: pointer;
+    transition: all 0.5s;
+}
+
+.btn-image {
+    width: 15px;
 }
 
 .controls {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 
+}
+
+.slidecontainer {
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.slidecontainer:nth-child(1) {
+    accent-color: #fff;
 }
 
 .btn:hover{
     color: black;
-    transform: scale(1.05);
+    transform: scale(1.25);
 }
 
 .playing{
-
     text-align: center;
+    font-size: 15px;
+    margin-bottom: -2px;
 }
 
 header {

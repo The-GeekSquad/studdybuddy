@@ -3,6 +3,8 @@ const orchAudio = new Audio('../assets/lofi-orchestra-162306.mp3');
 const relaxAudio = new Audio('../assets/lofi-relax-travel-by-lofium-123560.mp3');
 const studyAudio = new Audio('../assets/lofi-study-112191.mp3');
 const summerAudio = new Audio('../assets/summer-rain-lofi-vibes-216043.mp3');
+const buttonClick = new Audio('../assets/button.wav');
+buttonClick.volume = 0.5;
 
 const prevBtn = document.getElementById('previous');
 const playBtn = document.getElementById('play-pause');
@@ -28,12 +30,12 @@ document.addEventListener("DOMContentLoaded", function() {
         
         if (currentSong.paused){
             currentSong.play();
-            playPauseIcon.children[0].className = 'ph ph-pause';
-
+            playPauseIcon.children[0].src = '../assets/pause.png';
+            buttonClick.play();
         } else{
             currentSong.pause();
-            playPauseIcon.children[0].className = 'ph ph-play';
-
+            playPauseIcon.children[0].src = '../assets/play.png';
+            buttonClick.play();
         }
     })
 
@@ -43,37 +45,40 @@ document.addEventListener("DOMContentLoaded", function() {
 nextBtn.addEventListener('click', () => {
     updateSong('next');
     playPauseSong();
-  });
+});
   
-  prevBtn.addEventListener('click', () => {
+prevBtn.addEventListener('click', () => {
     updateSong('prev');
     playPauseSong();
-  });
+});
   
-  const updateSong = (action)=> {
+const updateSong = (action)=> {
     currentSong.pause();
     currentSong.currentTime = 0;
-  
+
     if(action === 'next'){
-      current++;
-      if(current > songs.length -1) current = 0;
+        current++;
+        if(current > songs.length -1) current = 0;
     }
     if(action === 'prev'){
-      current--;
-      if(current < 0) current = songs.length - 1;
+        current--;
+        if(current < 0) current = songs.length - 1;
     }
     currentSong = songs[current].ele;
     songName.textContent = songs[current].audioName;
-  }
+}
   
-  const playPauseSong = ()=> {
+const playPauseSong = ()=> {
     if(currentSong.paused){
-      currentSong.play();
-      playPauseIcon.children[0].className = 'ph-bold ph-pause';
+        currentSong.play();
+        playPauseIcon.children[0].src = '../assets/pause.png';
     }
     else {
-      currentSong.pause();
-      playPauseIcon.children[0].className = 'ph-bold ph-play';
+        currentSong.pause();
+        playPauseIcon.children[0].src = '../assets/play.png';
     }
-  }
+}
 
+setInterval(() =>{
+    currentSong.volume = document.getElementById('volumeSlider').value / 100;
+}, 100);

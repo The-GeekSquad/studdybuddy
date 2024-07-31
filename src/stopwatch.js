@@ -2,6 +2,32 @@ let [seconds, minutes, hours] = [0, 0, 0];
 let displayTime = document.getElementById("displayTime");
 let timer = null;
 
+const files = [
+    new Audio('../assets/ticks/1.wav'),
+    new Audio('../assets/ticks/2.wav'),
+    new Audio('../assets/ticks/3.wav'),
+    new Audio('../assets/ticks/4.wav'),
+    new Audio('../assets/ticks/5.wav'),
+    new Audio('../assets/ticks/6.wav'),
+    new Audio('../assets/ticks/7.wav'),
+    new Audio('../assets/ticks/8.wav'),
+    new Audio('../assets/ticks/9.wav'),
+    new Audio('../assets/ticks/10.wav')
+];
+
+let currentFile = 0;
+
+function getRandomAudio() {
+    let val = Math.floor(Math.random() * files.length);
+
+    if (val == currentFile) {
+        return getRandomAudio();
+    }
+
+    currentFile = val;
+    return val;
+}
+
 function stopwatch(){
     seconds++;
     if(seconds == 60){
@@ -16,26 +42,49 @@ function stopwatch(){
     let m = minutes < 10 ? "0" + minutes : minutes;
     let s = seconds < 10 ? "0" + seconds : seconds;
     displayTime.innerHTML = h + ":" + m + ":" + s;
+    files[getRandomAudio()].play();
 }
 
 function watchStart(){
     if (timer !== null) {
         clearInterval(timer);
     }
-    timer = setInterval(stopwatch, 1000);
-    document.querySelector('.study').play(); // Play music
+    files.forEach((audio) => {
+        audio.volume = 0;
+        audio.play();
+        setTimeout(() => {
+            audio.volume = 1;
+        }, 500);
+    });
+    setTimeout(() => {
+        timer = setInterval(stopwatch, 1000);
+    }, 100);
+    buttonClick.play();
 }
 
 function watchStop(){
     clearInterval(timer);
     timer = null;
-    document.querySelector('.study').pause(); // Pause music
+    buttonClick.play();
 }
 
 function resetWatch(){
     clearInterval(timer);
     [seconds, minutes, hours] = [0, 0, 0];
     displayTime.innerHTML = "00:00:00";
-    document.querySelector('.study').pause();
-    document.querySelector('.study').currentTime = 0; // Reset music
+    buttonClick.play();
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('timerStart').addEventListener('click', () => {
+        watchStart();
+    });
+
+    document.getElementById('timerPause').addEventListener('click', () => {
+        watchStop();
+    });
+
+    document.getElementById('timerReset').addEventListener('click', () => {
+        resetWatch();
+    });
+});
