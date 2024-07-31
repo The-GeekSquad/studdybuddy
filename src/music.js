@@ -38,18 +38,20 @@ document.addEventListener("DOMContentLoaded", function() {
             buttonClick.play();
         }
     })
-
+    
     
 });
 
 nextBtn.addEventListener('click', () => {
     updateSong('next');
     playPauseSong();
+    buttonClick.play();
 });
-  
+
 prevBtn.addEventListener('click', () => {
     updateSong('prev');
     playPauseSong();
+    buttonClick.play();
 });
   
 const updateSong = (action)=> {
