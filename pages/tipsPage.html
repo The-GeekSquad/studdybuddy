@@ -22,6 +22,56 @@
         </nav>
     </header>
 
+     <!-- Login/Signup/Reset Modal -->
+     <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeLoginBtn">&times;</span>
+            <div class="tab">
+                <button class="tablinks" data-tab="Login">Login</button>
+                <button class="tablinks" data-tab="Signup">Signup</button>
+                <button class="tablinks" data-tab="Reset">Reset Password</button>
+            </div>
+            <div id="Login" class="tabcontent">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="password" required autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+            <div id="Signup" class="tabcontent">
+                <h2>Signup</h2>
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" name="password" required autocomplete="new-password">
+                    </div>
+                    <button type="submit" class="btn">Signup</button>
+                </form>
+            </div>
+            <div id="Reset" class="tabcontent">
+                <h2>Reset Password</h2>
+                <form id="pass-reset-form">
+                    <div class="form-group">
+                        <label for="resetEmail">Email</label>
+                        <input type="email" id="resetEmail" name="email" required autocomplete="email">
+                    </div>
+                    <button type="submit" class="btn">Reset Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <section class="hero">
         <h2>Welcome to Study Hub Tips</h2>
         <p>Here you can find tips that will help you succeed. You can find common tips below, or you can ask away!</p>
