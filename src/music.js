@@ -73,6 +73,7 @@ const updateSong = (action)=> {
 const playPauseSong = ()=> {
     if(currentSong.paused){
         currentSong.play();
+        currentSong.loop = true;
         playPauseIcon.children[0].src = '../assets/pause.png';
     }
     else {
