@@ -20,7 +20,7 @@ Index.onAuthStateChanged(auth, (_user) => {
     user = _user;
 
     if (!user) {
-        window.location.href = '../pages/login.html';
+        window.location.href = '../pages/home.html';
         return;
     }
 

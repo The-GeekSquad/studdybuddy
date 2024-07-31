@@ -76,6 +76,17 @@ export function resetPassword(email) {
     });
 }
 
+
+export function logout() {
+    signOut(auth)
+        .then(() => {
+            window.location.href = '/pages/home.html'; // Redirect after successful logout
+        })
+        .catch((error) => {
+            console.error('Logout error:', error.message);
+        });
+}
+
 export {
     onAuthStateChanged,
     signOut,

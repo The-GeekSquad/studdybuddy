@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById('add-button').addEventListener('click', async () => {
         if (!user) {
-            window.location.href = '../pages/login.html';
+            window.location.href = '../pages/home.html';
             return;
         }
 
