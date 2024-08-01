@@ -35,7 +35,7 @@ function showLevelUpImage() {
   setTimeout(() => {
     levelUpImage.classList.add('hidden');
     updateXPBar();
-  }, 7000); // Show the image for 7 seconds
+  }, 3000); // Show the image for 7 seconds
 }
 
 updateXPBar();
