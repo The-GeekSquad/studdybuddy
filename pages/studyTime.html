@@ -20,19 +20,16 @@
         <h1>Game Study Hub</h1>
         <nav>
             <ul>
-                <li><a href="/pages/home.html">Home</a></li>
-                <li><a href="/pages/studyTime.html">Study Time</a></li>
-                <li><a href="/pages/review.html">Review</a></li>
-                <li><a href="/pages/tipsPage.html">Tips</a></li>
-                <li><a href="/pages/aboutUs.html">About</a></li>
-                <li><button id="openLoginBtn">Login/Signup</button></li>
-                <li><button id="logoutBtn">Logout</button></li> <!-- Added Logout Button -->
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./studyTime.html">Study Time</a></li>
+                <li><a href="./menu.html">Flashcards</a></li>
+                <li><button id="openLoginBtn" class="logged-out">Login/Signup</button></li>
+                <li><button id="logout-button" class="logged-in">Logout</button></li>
             </ul>
         </nav>
     </header>
 
-     <!-- Login/Signup/Reset Modal -->
-     <div id="loginModal" class="modal">
+    <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeLoginBtn">&times;</span>
             <div class="tab">
@@ -42,7 +39,7 @@
             </div>
             <div id="Login" class="tabcontent">
                 <h2>Login</h2>
-                <form id="login-form">
+                <form id="login-form" onsubmit="return false;">
                     <div class="form-group">
                         <label for="loginEmail">Email</label>
                         <input type="email" id="loginEmail" name="email" required autocomplete="email">
@@ -51,12 +48,12 @@
                         <label for="loginPassword">Password</label>
                         <input type="password" id="loginPassword" name="password" required autocomplete="current-password">
                     </div>
-                    <button type="submit" class="btn">Login</button>
+                    <button type="submit">Login</button>
                 </form>
             </div>
             <div id="Signup" class="tabcontent">
                 <h2>Signup</h2>
-                <form id="signup-form">
+                <form id="signup-form" onsubmit="return false;">
                     <div class="form-group">
                         <label for="signupEmail">Email</label>
                         <input type="email" id="signupEmail" name="email" required autocomplete="email">
@@ -65,17 +62,17 @@
                         <label for="signupPassword">Password</label>
                         <input type="password" id="signupPassword" name="password" required autocomplete="new-password">
                     </div>
-                    <button type="submit" class="btn">Signup</button>
+                    <button type="submit">Signup</button>
                 </form>
             </div>
             <div id="Reset" class="tabcontent">
                 <h2>Reset Password</h2>
-                <form id="pass-reset-form">
+                <form id="pass-reset-form" onsubmit="return false;">
                     <div class="form-group">
                         <label for="resetEmail">Email</label>
                         <input type="email" id="resetEmail" name="email" required autocomplete="email">
                     </div>
-                    <button type="submit" class="btn">Reset Password</button>
+                    <button type="submit">Reset Password</button>
                 </form>
             </div>
         </div>
@@ -112,8 +109,9 @@
         </div>
     </div>
 
-    <script src="../dist/index.js"></script>
-    <script src="../src/loginthing.js" type="module"></script>
+    <script src="../dist/loginSignUpPasswordReset.js"></script>
+    <script src="../dist/header.js"></script>
+    <script src="../src/loginthing.js"></script>
     
     <footer>
         <p>&copy; 2024 StuddyBuddy. All rights reserved.</p>

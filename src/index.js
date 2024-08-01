@@ -47,7 +47,7 @@ export function generateUrlParams(page, paramsObject) {
 export function loginEmailPass(email, password) {
     signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-            window.location.href = '../Index.html';
+            window.location.href = './index.html';
         })
         .catch((error) => {
             setError(error.message);

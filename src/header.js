@@ -7,10 +7,10 @@ Index.onAuthStateChanged(auth, (user) => {
     let elementsOut = document.getElementsByClassName('logged-out');
 
     for(let i = 0; i < elementsIn.length; i++) {
-        elementsIn[i].style.display = user ? "inline" : "none";
+        elementsIn[i].parentNode.style.display = user ? "inline" : "none";
     }
     for(let i = 0; i < elementsOut.length; i++) {
-        elementsOut[i].style.display = user ? "none" : "inline";
+        elementsOut[i].parentNode.style.display = user ? "none" : "inline";
     }
 });
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (logOutButton) {
         logOutButton.addEventListener('click', () => {
             Index.signOut(auth).then(() => {
-                window.location.href = '../Index.html';
+                window.location.href = './index.html';
             }).catch((error) => {
                 console.log(error);
             });

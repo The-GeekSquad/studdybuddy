@@ -20,12 +20,12 @@ Index.onAuthStateChanged(auth, (_user) => {
     user = _user;
 
     if (!user) {
-        window.location.href = '../pages/home.html';
+        window.location.href = './protected.html';
         return;
     }
 
     if (!deckId) {
-        window.location.href = '../pages/menu.html';
+        window.location.href = './protected.html';
         return;
     }
 

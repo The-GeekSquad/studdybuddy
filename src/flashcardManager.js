@@ -22,13 +22,13 @@ async function displayFlashcards() {
 
         newBox.children[1].innerHTML = doc.data().name;
         newBox.children[2].href = Index.generateUrlParams(
-            '../pages/review.html',
+            './review.html',
             {
                 'id': doc.id
             }
         );
         newBox.children[3].href = Index.generateUrlParams(
-            '../pages/flashcardCreator.html',
+            './flashcardCreator.html',
             {
                 'id': doc.id
             }
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById('add-button').addEventListener('click', async () => {
         if (!user) {
-            window.location.href = '../pages/home.html';
+            window.location.href = './protected.html';
             return;
         }
 
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         window.location.href = Index.generateUrlParams(
-            '../pages/flashcardCreator.html',
+            './flashcardCreator.html',
             {
                 'id': deck.id
             }

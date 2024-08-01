@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hub</title>
+    <link rel="stylesheet" href="../styles/head.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/loginthing.css"> 
+    <link rel="stylesheet" href="../styles/index.css"> 
+</head>
+<body>
+    <header>
+        <h1>Studdy Buddy</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./studyTime.html">Study Time</a></li>
+                <li><a href="./menu.html">Flashcards</a></li>
+                <li><button id="openLoginBtn" class="logged-out">Login/Signup</button></li>
+                <li><button id="logout-button" class="logged-in">Logout</button></li> <!-- Added Logout Button -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2 class="title">Welcome to Studdy Buddy!</h2>
+        <p class="title" style="font-size: 30px;">Combine learning with fun! Access educational tools and resources to boost your knowledge while enjoying your time.</p>
+    </section>
+
+    <div class="main">
+        <div class="section">
+            <img src="../assets/flash-cards.png" class="fade-in" style="width: 250px">
+            <div class="text-body">
+                <p class="title fade-in">Flashcards</p>
+                <p class="description fade-in">Our digital flashcards are super easy to use with a simple UI and no junk like ads to hog screen & mind space.</p>
+                <a class="button fade-in" href="./menu.html">Try it out!</a>
+            </div>
+        </div>
+
+        <div class="section invert">
+            <div class="text-body">
+                <p class="title fade-in">Study Zone</p>
+                <p class="description fade-in">Our Study Zone offers a stopwatch with optional satisfying rewards and features to keep you focused and motivated.</p>
+                <a class="button fade-in" href="./studyTime.html">Try it out!</a>
+            </div>
+            <img src="../assets/clock.svg" class="fade-in" style="width: 250px">
+        </div>
+    </div>
+
+    <!-- Login/Signup/Reset Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeLoginBtn">&times;</span>
+            <div class="tab">
+                <button class="tablinks" data-tab="Login">Login</button>
+                <button class="tablinks" data-tab="Signup">Signup</button>
+                <button class="tablinks" data-tab="Reset">Reset Password</button>
+            </div>
+            <div id="Login" class="tabcontent">
+                <h2>Login</h2>
+                <form id="login-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="password" required autocomplete="current-password">
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div id="Signup" class="tabcontent">
+                <h2>Signup</h2>
+                <form id="signup-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" name="password" required autocomplete="new-password">
+                    </div>
+                    <button type="submit">Signup</button>
+                </form>
+            </div>
+            <div id="Reset" class="tabcontent">
+                <h2>Reset Password</h2>
+                <form id="pass-reset-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="resetEmail">Email</label>
+                        <input type="email" id="resetEmail" name="email" required autocomplete="email">
+                    </div>
+                    <button type="submit">Reset Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../dist/loginSignUpPasswordReset.js"></script>
+    <script src="../dist/header.js"></script>
+    <script src="../src/loginthing.js"></script>
+    <script src="../src/fadeIn.js"></script>
+    
+    <footer>
+        <p>&copy; 2024 StudyBuddy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
