@@ -20,8 +20,5 @@ jobs:
 
     - name: Run Script with Firebase Secret
       run: |
-        echo "FIREBASE_API_KEY=${{ secrets.FIREBASE_API_KEY }}" > .env
-
-    - name: Run Script with Groq Secret
-      run: |
-        echo "GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}" > .env
+        echo "FIREBASE_API_KEY=${{ secrets.FIREBASE_API_KEY }}" >> .env
+        echo "GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}" >> .env
