@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XP Bar Example</title>
-    <link rel="stylesheet" href="../styles/xpbar.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XP Bar</title>
+  <link rel="stylesheet" href="../styles/xpbar.css">
 </head>
 <body>
-    <div class="xp-container">
-        <div class="xp-bar" id="xp-bar"></div>
-        <div class="xp-text" id="xp-text">0 / 100 XP</div>
+  <div class="container">
+    <div class="xp-bar">
+      <div class="xp-fill" id="xp-fill"></div>
     </div>
-    <div class="info">
-        <p id="level-text">Level: 1</p>
-        <p id="total-xp-text">Total XP: 0</p>
+    <div class="xp-info">
+      <span id="xp-text">XP: 0/100</span>
     </div>
     <button onclick="addXP(10)">Gain 10 XP</button>
-    <button onclick="resetXP()">Reset XP</button>
-    <script src="../src/xpbar.js"></script>
+  </div>
+  <script src="../src/xpbar.js"></script>
 </body>
 </html>
