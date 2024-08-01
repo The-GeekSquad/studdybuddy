@@ -63,7 +63,8 @@ body {
 
 .container .box-container .box .edit-button,
 .container .box-container .box .review-button,
-.container .box-container .box .delete-button{
+.container .box-container .box .delete-button,
+.container .box-container .box .quiz-button{
     margin-top: 10px;
     display: inline-block;
     background: #333;
@@ -76,7 +77,8 @@ body {
 
 .container .box-container .box .edit-button:hover,
 .container .box-container .box .review-button:hover,
-.container .box-container .box .delete-button:hover{
+.container .box-container .box .delete-button:hover,
+.container .box-container .box .quiz-button:hover{
     letter-spacing: 1px;
 }
 
@@ -174,3 +176,16 @@ header nav ul li a {
 }
 
 
+a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
+  

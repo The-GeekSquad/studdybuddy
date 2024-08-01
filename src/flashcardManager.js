@@ -33,8 +33,14 @@ async function displayFlashcards() {
                 'id': doc.id
             }
         );
-        newBox.children[4].addEventListener('click', async () => {
-            if (newBox.children[4].innerHTML !== 'Delete') {
+        newBox.children[4].href = Index.generateUrlParams(
+            './flashcardQuiz.html',
+            {
+                'id': doc.id
+            }
+        );
+        newBox.children[5].addEventListener('click', async () => {
+            if (newBox.children[5].innerHTML !== 'Delete') {
                 try {
                     const docRef = Index.doc(db, `${decksPath}${doc.id}`);
                     await Index.deleteDoc(docRef);
@@ -44,9 +50,9 @@ async function displayFlashcards() {
                     console.error('Error deleting document: ', error);
                 }
             } else {
-                newBox.children[4].innerHTML = 'ARE YOU SURE? (CLICK AGAIN)';
+                newBox.children[5].innerHTML = 'ARE YOU SURE? (CLICK AGAIN)';
                 setTimeout(function() {
-                    newBox.children[4].innerHTML = 'Delete';
+                    newBox.children[5].innerHTML = 'Delete';
                 }, 5000);
             }
         });

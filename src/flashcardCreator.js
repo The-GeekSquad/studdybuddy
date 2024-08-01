@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     doneButton.addEventListener('click', function() {
-        window.location.href = './menu.html'
+        window.location.href = './menu.html';
     });
 
     genButton.addEventListener('click', function() {
