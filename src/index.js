@@ -19,7 +19,7 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDQTa3ulEe5m9LgPZfhnreCPH00UpfKT04",
+    apiKey: process.env.FIREBASE_API_KEY,
     authDomain: "studdy-buddy-293cb.firebaseapp.com",
     projectId: "studdy-buddy-293cb",
     storageBucket: "studdy-buddy-293cb.appspot.com",
