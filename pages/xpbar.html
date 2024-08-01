@@ -8,15 +8,19 @@
 </head>
 <body>
   <div class="container">
-    <div class="xp-bar">
+    <div class="xp-bar" id="xp-bar">
       <div class="xp-fill" id="xp-fill">
         <div class="xp-glow" id="xp-glow"></div>
       </div>
     </div>
     <div class="xp-info">
-      <span id="xp-text">XP: 0/100</span>
+      <span id="xp-text">XP: 0/100</span><br>
+      <span id="level-text">Level: 1</span>
     </div>
     <button onclick="addXP(10)">Gain 10 XP</button>
+    <div id="level-up-image" class="hidden">
+      <img src="https://media.sproutsocial.com/uploads/meme-example.jpg" alt="Level Up!" />
+    </div>
   </div>
   <script src="../src/xpbar.js"></script>
 </body>

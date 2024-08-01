@@ -64,6 +64,17 @@ body {
     background-color: #e600e6;
   }
   
+  .hidden {
+    display: none;
+  }
+  
+  #level-up-image img {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+  }
+  
   @keyframes glowing {
     from {
       opacity: 0.5;
@@ -72,4 +83,5 @@ body {
       opacity: 1;
     }
   }
+  
   
