@@ -169,6 +169,7 @@ export async function getGroqChatCompletion() {
         },
     ],
     model: "llama3-8b-8192",
+    response_format: { type: "json_object" }
     });
 }
 
