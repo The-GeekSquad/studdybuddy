@@ -29,6 +29,7 @@ body {
 .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    width: 50%;
     gap:15px;
 }
 
