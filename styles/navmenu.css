@@ -39,7 +39,7 @@ li a{
     font-weight: 500;
 }
 
-.signup{
+.openLoginBtn{
     border-radius: 6px;
     border-color: #B4CEB3;
     border-bottom-color: #B4CEB3;
@@ -50,7 +50,7 @@ li a{
     font-size: 14px;
     font-weight: 500;
 }
-.login{
+.logout-button{
     border-radius: 6px;
     border-color: #B4CEB3;
     border-bottom-color: #B4CEB3;
@@ -61,9 +61,9 @@ li a{
     font-size: 14px;
     font-weight: 500;
 }
-.signup a{
+.openLoginBtn a{
     background-color:#f0f0f0;
 }
-.login a{
+.logout-button a{
     background-color: #f0f0f0;
 }
