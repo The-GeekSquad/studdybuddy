@@ -50,7 +50,7 @@
   .xp-info {
   }
   
-  button {
+  /* button {
     padding: 10px 20px;
     background-color: #ff00ff;
     border: none;
@@ -63,7 +63,7 @@
   
   button:hover {
     background-color: #e600e6;
-  }
+  } */
   
   .hidden {
     display: none;
