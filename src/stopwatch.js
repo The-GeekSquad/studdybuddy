@@ -1,4 +1,4 @@
-let [seconds, minutes, hours] = [0, 0, 0];
+let [seconds, minutes, hours] = [50, 14, 0];
 let displayTime = document.getElementById("displayTime");
 let timer = null;
 
@@ -66,7 +66,7 @@ function watchStart(){
         audio.volume = 0;
         audio.play();
         setTimeout(() => {
-            audio.volume = 1;
+            if (!isMuted) audio.volume = 1;
         }, 500);
     });
     setTimeout(() => {

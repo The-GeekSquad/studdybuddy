@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hub</title>
+    <link rel="stylesheet" href="../styles/review.css">
+    <link rel="stylesheet" href="../styles/head.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/flashcardQuiz.css">
+</head>
+</head>
+<body>
+    <header>
+        <h1>Game Study Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./studyTime.html">Study Time</a></li>
+                <li><a href="./menu.html">Flashcards</a></li>
+                <li><button id="openLoginBtn" class="logged-out">Login/Signup</button></li>
+                <li><button id="logout-button" class="logged-in">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to the FlashCard Reviewer</h1>
+        <p>Here you can review your flashcards</p>
+    </section>
+   <!-- Login/Signup/Reset Modal -->
+   <div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeLoginBtn">&times;</span>
+        <div class="tab">
+            <button class="tablinks" data-tab="Login">Login</button>
+            <button class="tablinks" data-tab="Signup">Signup</button>
+            <button class="tablinks" data-tab="Reset">Reset Password</button>
+        </div>
+        <div id="Login" class="tabcontent">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="password" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+        <div id="Signup" class="tabcontent">
+            <h2>Signup</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="password" required autocomplete="new-password">
+                </div>
+                <button type="submit" class="btn">Signup</button>
+            </form>
+        </div>
+        <div id="Reset" class="tabcontent">
+            <h2>Reset Password</h2>
+            <form id="pass-reset-form">
+                <div class="form-group">
+                    <label for="resetEmail">Email</label>
+                    <input type="email" id="resetEmail" name="email" required autocomplete="email">
+                </div>
+                <button type="submit" class="btn">Reset Password</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <a href="./menu.html">
+            <button type="button" class="back-button">
+                <span class="icon">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                </span>
+                <span class="button__text">Back</span>
+            </button>
+        </a>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <p style="text-align: center; width: 250px;">WARNING: This AI system may generate inaccurate or misleading information that does not represent our views and opinions</p>
+    </div>
+    <div class="maincontainer">
+        <div id="card" class="thecard">
+            <div class="thefront" id="card-element"></div>
+            <div class="theback"></div>
+        </div>
+    </div>
+
+    <div class="options">
+        <button id="button-1" type="button" class="button"></button>
+        <button id="button-2" type="button" class="button"></button>
+        <button id="button-3" type="button" class="button"></button>
+        <button id="button-4" type="button" class="button"></button>
+    </div>
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script src="../dist/flashcardQuiz.js"></script>
+
+    <script src="../dist/loginSignUpPasswordReset.js"></script>
+    <script src="../dist/header.js"></script>
+    <script src="../src/loginthing.js"></script>
+    
+    <footer>
+        <p>&copy; 2024 StuddyBuddy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

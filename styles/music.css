@@ -16,12 +16,13 @@ body {
 }
 
 .btn {
-    background-color: transparent;
+    background-color: transparent !important;
     color: gray;
     font-size: 30px;
     border: none;
     cursor: pointer;
     transition: all 0.5s;
+    margin-top: -12px;
 }
 
 .btn-image {
@@ -36,7 +37,7 @@ body {
 
 .slidecontainer {
     justify-content: flex-end;
-    align-self: flex-end;
+    align-self: center;
 }
 
 .slidecontainer:nth-child(1) {

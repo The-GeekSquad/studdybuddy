@@ -1,4 +1,4 @@
-body {
+/* body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,11 +6,13 @@ body {
     background-color: #1a1a1a;
     color: #fff;
     font-family: Arial, sans-serif;
-  }
+  } */
   
-  .container {
-    text-align: center;
-  }
+  .xp-container {
+    margin-bottom: 100px;
+    margin-inline: auto;
+    width: 250px;
+}
   
   .xp-bar {
     width: 100%;
@@ -46,7 +48,6 @@ body {
   }
   
   .xp-info {
-    margin-bottom: 20px;
   }
   
   button {

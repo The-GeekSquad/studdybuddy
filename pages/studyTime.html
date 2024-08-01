@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="../styles/timer.css">
     <link rel="stylesheet" href="../styles/head.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/xpbar.css">
 </head>
     <link rel="stylesheet" href="../styles/music.css">
     <script src="../src/music.js" defer></script>
     <script src="../src/stopwatch.js" defer></script>
+    <script src="../dist/xpbar.js"></script>
 </head>
 <body>
     
@@ -84,6 +86,23 @@
 
     <div class="stopwatch">
         <img id="mute-button" class="mute-button" src="../assets/unmuted.png">
+        
+        <div class="xp-container">
+            <div class="xp-bar" id="xp-bar">
+            <span id="level-text" style="z-index: 1; position: absolute; align-self: center; margin-left: -15px; margin-top: 7px;">Lv. 1</span>
+            <div class="xp-fill" id="xp-fill">
+              <div class="xp-glow" id="xp-glow"></div>
+            </div>
+          </div>
+          <div class="xp-info">
+            <!-- <span id="xp-text">XP: 0/100</span><br> -->
+            <!-- <span id="level-text">Level: 1</span> -->
+          </div>
+          <!-- <button onclick="addXP(10)">Gain 10 XP</button> -->
+          <div id="level-up-image" class="hidden">
+            <img src="https://media.sproutsocial.com/uploads/meme-example.jpg" alt="Level Up!" />
+          </div>
+        </div>
 
         <h1 id="displayTime">00:00:00</h1>
         <div class="buttons">  

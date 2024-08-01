@@ -9,7 +9,9 @@ module.exports = {
         'loginSignUpPasswordReset': './src/loginSignUpPasswordReset.js',
         'flashcardCreator': './src/flashcardCreator.js',
         'flashcardManager': './src/flashcardManager.js',
-        'flashcardReview': './src/flashcardReview.js'
+        'flashcardReview': './src/flashcardReview.js',
+        'flashcardQuiz': './src/flashcardQuiz.js',
+        'xpbar': './src/xpbar.js'
     },
     devtool: 'eval-source-map',
     output: {
