@@ -2,6 +2,8 @@ let [seconds, minutes, hours] = [0, 0, 0];
 let displayTime = document.getElementById("displayTime");
 let timer = null;
 
+let isMuted = false;
+
 const files = [
     new Audio('../assets/ticks/1.wav'),
     new Audio('../assets/ticks/2.wav'),
@@ -26,6 +28,17 @@ function getRandomAudio() {
 
     currentFile = val;
     return val;
+}
+
+function mute() {
+    isMuted = !isMuted;
+
+    files.forEach((audio) => {
+        audio.volume = +!isMuted;
+    });
+    document.getElementById('mute-button').src = isMuted
+    ? '../assets/muted.svg'
+    : '../assets/unmuted.png';
 }
 
 function stopwatch(){
@@ -87,4 +100,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('timerReset').addEventListener('click', () => {
         resetWatch();
     });
+
+    document.getElementById('mute-button').addEventListener('click', () => {
+        mute();
+    })
 });

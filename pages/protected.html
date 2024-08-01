@@ -4,20 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protected Page</title>
-    <script type="module">
-        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
-
-        const auth = getAuth();
-
-        onAuthStateChanged(auth, (user) => {
-            if (!user) {
-                // User is not signed in, redirect to home.html
-                window.location.href = '/pages/home.html';
-            }
-        });
-    </script>
-        <script src="../dist/index.js"></script>
-
         
 </head>
 <body>

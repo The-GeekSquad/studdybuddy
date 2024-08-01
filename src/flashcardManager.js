@@ -34,7 +34,7 @@ async function displayFlashcards() {
             }
         );
         newBox.children[4].addEventListener('click', async () => {
-            if (newBox.dataset.confirmed) {
+            if (newBox.children[4].innerHTML !== 'Delete') {
                 try {
                     const docRef = Index.doc(db, `${decksPath}${doc.id}`);
                     await Index.deleteDoc(docRef);
@@ -44,10 +44,8 @@ async function displayFlashcards() {
                     console.error('Error deleting document: ', error);
                 }
             } else {
-                newBox.dataset.confirmed = true;
                 newBox.children[4].innerHTML = 'ARE YOU SURE? (CLICK AGAIN)';
                 setTimeout(function() {
-                    newBox.dataset.confirmed = false;
                     newBox.children[4].innerHTML = 'Delete';
                 }, 5000);
             }

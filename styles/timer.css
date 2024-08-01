@@ -60,6 +60,20 @@ body {
 
 }
 
+.mute-button{
+    width: 30px;
+    margin-left: 20px;
+    margin-top: -20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s;
+    flex: 0;
+}
+
+.mute-button:hover{
+    transform: scale(1.25);
+}
+
 header {
     background: #333;
     color: #fff;
