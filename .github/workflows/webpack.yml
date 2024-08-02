@@ -32,7 +32,7 @@ jobs:
         npx webpack
 
     - name: Upload Build Artifact
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: github-pages
         path: .
