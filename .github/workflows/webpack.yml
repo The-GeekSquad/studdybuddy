@@ -34,6 +34,16 @@ jobs:
         npm install
         npm run build
 
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: build
+        path: |
+          dist
+          # Add other build output directories if needed
+
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v1
+      with:
+        artifact_name: build
