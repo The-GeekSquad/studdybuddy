@@ -99,7 +99,7 @@ let fifteenMinuteTimer = setInterval(() => {
         };
         setTimeout(() => {
             canFifteenMinutes = true;
-        }, 100000);
+        }, 50000);
     }
 }, 100);
 
@@ -117,7 +117,7 @@ let hourTimer = setInterval(() => {
         };
         setTimeout(() => {
             canThirtyMinutes = true;
-        }, 100000);
+        }, 50000);
     }
 }, 100);
 
