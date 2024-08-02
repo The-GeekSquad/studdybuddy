@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: 22
+        node-version: [20.15]
 
     env:
       FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
