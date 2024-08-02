@@ -32,10 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 Index.onAuthStateChanged(auth, (_user) => {
     user = _user;
 
-    if (!user) {
-        window.location.href = './protected.html';
-        return;
-    }
+    if (!user) return;
 
     syncWithFirebase();
 });
