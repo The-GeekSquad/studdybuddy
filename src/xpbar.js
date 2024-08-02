@@ -120,7 +120,7 @@ let hourTimer = setInterval(() => {
         canThirtyMinutes = false;
         setTimeout(() => {
             canThirtyMinutes = true;
-        }, 100000);
+        }, 1000);
     }
 }, 100);
 
