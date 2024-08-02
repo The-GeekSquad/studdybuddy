@@ -9,6 +9,11 @@ const db = Index.db;
 
 var user;
 
+const notificationAudio = [
+    new Audio('../assets/fifteenMinuteAlert.mp3'),
+    new Audio('../assets/thirtyMinuteAlert.mp3')
+];
+
 Index.onAuthStateChanged(auth, (_user) => {
     user = _user;
 
@@ -63,15 +68,22 @@ function levelUp() {
   showLevelUpImage();
 }
 
-function showLevelUpImage() {
-  const levelUpImage = document.getElementById('level-up-image');
-  levelUpImage.classList.remove('hidden');
-  
+function showLevelUpImage(id) {
   setTimeout(() => {
-    levelUpImage.classList.add('hidden');
     currentXP = 0;
     updateXPBar();
   }, 3000); // Show the image for 7 seconds
+}
+
+function showNotifier(id) {
+    const levelUpImage = document.getElementById('level-up-image');
+    levelUpImage.children[id].classList.remove('hidden');
+    levelUpImage.children[id].play()
+    notificationAudio[id].play();
+
+    levelUpImage.children[id].addEventListener('ended', () => {
+        levelUpImage.children[id].classList.add('hidden');
+    });
 }
 
 let canFifteenMinutes = true;
@@ -79,7 +91,10 @@ let fifteenMinuteTimer = setInterval(() => {
     if (document.getElementById('displayTime').innerHTML.split(':')[1] == 15
     ||document.getElementById('displayTime').innerHTML.split(':')[1] == 45
     && canFifteenMinutes) {
-        if (user) addXP(25);
+        if (user) {
+            addXP(25);
+            showNotifier(0);
+        };
         canFifteenMinutes = false;
         setTimeout(() => {
             canFifteenMinutes = true;
@@ -94,7 +109,10 @@ let hourTimer = setInterval(() => {
     && document.getElementById('displayTime').innerHTML.split(':')[2] == 0
     && document.getElementById('displayTime').innerHTML.split(':')[0] != 0
     && canThirtyMinutes) {
-        if (user) addXP(50);
+        if (user) {
+            addXP(50)
+            showNotifier(1);
+        };
         canThirtyMinutes = false;
         setTimeout(() => {
             canThirtyMinutes = true;
@@ -104,14 +122,15 @@ let hourTimer = setInterval(() => {
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('timerStart').addEventListener('click', () => {
-        
-    });
-
-    document.getElementById('timerPause').addEventListener('click', () => {
-        
-    });
-
-    document.getElementById('timerReset').addEventListener('click', () => {
-        
+        notificationAudio.forEach((audio) => {
+            audio.volume = 0;
+            audio.play();
+            setTimeout(() => {
+                audio.volume = 0.5;
+            }, 5000);
+        });
+        Array.from(document.getElementById('level-up-image').children).forEach((video) => {
+            video.play();
+        });
     });
 });
