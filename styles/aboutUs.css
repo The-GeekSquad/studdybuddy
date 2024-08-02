@@ -1,0 +1,30 @@
+.hero{
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #dacfc2;
+    border-radius: 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #dacfc2;
+    border-radius: 15px;
+}
+
+.introductions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.intro{
+    background-color: #e4ded7;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
