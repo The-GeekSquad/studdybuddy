@@ -33,6 +33,7 @@ jobs:
     - name: Create folder
       run: |
         mkdir -p release/
+        cp -r --dereference --no-preserve=mode,ownership release/
 
     - name: Zip artifact for deployment
       run: zip ./release/release.zip ./* -r
