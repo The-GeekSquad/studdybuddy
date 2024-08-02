@@ -2,30 +2,30 @@
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StuddyBuddy</title>
+    <title>About Us • StuddyBuddy</title>
     <link rel="stylesheet" href="../styles/loginthing.css"> 
-    <link rel="stylesheet" href="../styles/navmenu.css>
-    <link rel="stylesheet" href="../styles/footer.css>
+    <link rel="stylesheet" href="../styles/navmenu.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/aboutUs.css">
     <link type="image/png" sizes="32x32" rel="icon" href="../assets/icons8-study-32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>StuddyBuddy</h1>
-        <nav>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="heading"><h1><a href="../pages/Index.html">StuddyBuddy</a></h1></div>
             <ul>
-                <li><a href="./studyTime.html">Study Time</a></li>
-                <li><a href="./menu.html">Flashcards</a></li>
-                <li><a href="./store.html">Themes</a></li>
-                <li> <a href="./aboutUs.html>About Us</a></li>
+                <li><a href="../pages/studyTime.html">Study Timer</a></li>
+                <li><a href="../pages/menu.html">Flashcards</a></li>
+                <li><a href="../pages/aboutUs.html">About Us</a></li>
+                <li><a href="../pages/store.html">Store</a></li>
                 <li><button id="openLoginBtn" class="logged-out">Login/Signup</button></li>
-                <li><button id="logoutBtn" class="logged-in">Logout</button></li> <!-- Added Logout Button -->
+                <li><button id="logout-button" class="logged-in">Logout</button></li> <!-- Added Logout Button -->
             </ul>
-        </nav>
-    </header>
-    </header>
+        </div>
+    </nav>
    <!-- Login/Signup/Reset Modal -->
    <div id="loginModal" class="modal">
     <div class="modal-content">
@@ -76,7 +76,34 @@
     </div>
 </div>
 
-    
+    <section class="hero">
+        <h1 style="text-align: center;">About Us!</h1>
+        <p style="text-align: center;">Our team brainstormed problems in our respective communities that we would like to tackle and eliminate. We would like for all students to have a fair chance in studying. Our ideas all had one problem in common: The loss of motivation to study. This is a growing problem in which numerous FGLI students lose interest in studying because they don't see the point in it. We tackle this issue by providing incentives and allowing customizability, as that is something students love.<br>
+            (By the way, our name's not "Study Buddy". It's "STUDDYBUDDY", you know. Heavy pronunciation on the d's in a stereotypical South Asian accent.)<br>
+        </p>
+        </section>
+        
+        <div class="container">
+            <h1 style="text-align: center;">Made By</h1>
+            <div class="introductions">
+            <div class="intro">
+                <h1>Fatima Abbasi</h1>
+            </div>
+            <div class="intro">
+                <h1>Daniel Laferriere</h1>
+            </div>
+            <div class="intro">
+                <h1>Swanish Baweja</h1>
+            </div>
+            <div class="intro">
+                <h1>Sukhdeep Somal</h1>
+            </div>
+        </div>
+        </div>
+<script src="../dist/loginSignUpPasswordReset.js"></script>
+    <script src="../dist/header.js"></script>
+    <script src="../src/loginthing.js"></script>
+    <script src="../src/fadeIn.js"></script>
     <footer>
         <p>&copy; 2024 StuddyBuddy. All rights reserved.</p>
     </footer>
