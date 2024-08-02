@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     loader = document.body.appendChild(document.querySelector('.loader'));
 
     loader.addEventListener('transitioned', () => {
-        document.body.removeChild('loader');
+        document.body.removeChild(loader);
     })
 });
 
