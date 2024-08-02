@@ -26,10 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Clean Build Directory
-      run: |
-        rm -rf ./dist # Adjust this to the directory where Webpack outputs the built files
-
     - name: Build
       run: |
         npm install
@@ -39,7 +35,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: github-pages
-        path: ./dist
+        path: .
 
   deploy:
     # Add a dependency to the build job
