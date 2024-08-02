@@ -23,7 +23,7 @@ SETUP STEPS:
 6. Go to the `/src/index.js` file in the project's directory/folder and modify the Firebase config variable to meet your Firebase app's information (you should get this information during the process of creating your app or setting it up with Auth and Firestore)
 7. Go to `https://console.groq.com/keys` and create an API key
 8. Create a file called `.env` in the project's directory/folder and add two keys in the following format that match your API keys
-```FIREBASE_API_KEY = YOUR KEY HERE
-GROQ_API_KEY = YOUR KEY HERE```
+``FIREBASE_API_KEY = YOUR KEY HERE
+GROQ_API_KEY = YOUR KEY HERE``
 9. In the terminal, run the command `npm run build` to build the Javascript code that you modified
 10. In your file browser, double click `index.html` to launch the app in a browser of your choice
