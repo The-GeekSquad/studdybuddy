@@ -32,7 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
 Index.onAuthStateChanged(auth, (_user) => {
     user = _user;
 
-    if (!user) return;
+    if (!user) {
+        loader.classList.add('loader-hidden');
+        return;
+    }
 
     syncWithFirebase();
 });
