@@ -1,66 +1,92 @@
-name: NodeJS with Webpack
+# name: NodeJS with Webpack
+
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       id-token: write
+#       pages: write
+
+#     env:
+#       FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+#       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+
+#     steps:
+#     - uses: actions/checkout@v4
+
+#     - name: Use Node.js
+#       uses: actions/setup-node@v4
+#       with:
+#         node-version: 20.15
+
+#     - name: Build
+#       run: |
+#         npm install
+#         npm run build
+
+#     - name: Zip artifact for deployment
+#       run: zip release.zip ./* -r
+
+#     - name: Upload artifact for deployment job
+#       uses: actions/upload-artifact@v4
+#       with:
+#         name: github-pages
+#         path: release.zip
+
+#   deploy:
+#     # Add a dependency to the build job
+#     needs: build
+
+#     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+#     permissions:
+#       pages: write      # to deploy to Pages
+#       id-token: write   # to verify the deployment originates from an appropriate source
+
+#     # Deploy to the github-pages environment
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.deployment.outputs.page_url }}
+
+#     # Specify runner + deployment step
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Deploy to GitHub Pages
+#         id: deployment
+#         uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
+
+
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [main]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      pages: write
-
     env:
       FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.15'  # Replace with your desired Node.js version
+      - name: Build
+        run: |
+          npm install
+          npm run build
+      - name: Deploy
+        uses: actions/deploy@v1
+        with:
+          provider: pages
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          folder: .
 
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20.15
-
-    - name: Build
-      run: |
-        npm install
-        npm run build
-
-    - name: Create folder
-      run: |
-        mkdir -p release/
-        cp -r --dereference --no-preserve=mode,ownership release/
-
-    - name: Zip artifact for deployment
-      run: zip ./release/release.zip ./* -r
-
-    - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v4
-      with:
-        name: github-pages
-        path: ./release/release.zip
-
-  deploy:
-    # Add a dependency to the build job
-    needs: build
-
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
-
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    # Specify runner + deployment step
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
