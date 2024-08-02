@@ -1,0 +1,155 @@
+/* styles.css */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #dad2c8;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff8e7;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.theme-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.theme-item {
+    background-color: #e3e3e3;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+.lime-theme {
+    background-color: #e2de84;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+.pink-theme {
+    background-color: #ebcbf0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+.blues-theme {
+    background-color: #8c97c7;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+.tropical-theme {
+    background-color: #ffafbd;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+.sunset-theme {
+    background-color: #ffcc66;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+.sky-theme {
+    background-color: #6dd5fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+.ocean-theme {
+    background-color: #00c6ff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+
+.breeze-theme {
+    background-color: #96c93d;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+.autumn-theme {
+    background-color: #f8b195;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+.morning-theme {
+    background-color: #ffb347;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+.theme-item h2 {
+    margin: 0 0 10px;
+}
+
+.purchase-btn {
+    padding: 10px 20px;
+    background-color: #fff8e7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+.purchase-btn a{
+    background-color: #f0f0f0;
+    font-family: "Inter", sans-serif;
+}
+
+.purchase-btn:disabled {
+    background-color: #aaa;
+    font-family: "Inter", sans-serif;
+}
+
+.theme-btn{
+    padding: 10px 20px;
+    background-color: #fff8e7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+.theme-btn a{
+    background-color:#f0f0f0;
+    font-family: "Inter", sans-serif;
+}
+
+.theme-btn:disabled {
+    cursor: default;
+}
