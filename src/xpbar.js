@@ -110,7 +110,7 @@ let hourTimer = setInterval(() => {
     && document.getElementById('displayTime').innerHTML.split(':')[0] != 0
     && canThirtyMinutes) {
         if (user) {
-            addXP(50)
+            addXP(50);
             showNotifier(1);
         };
         canThirtyMinutes = false;
