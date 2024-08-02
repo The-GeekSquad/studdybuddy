@@ -77,6 +77,7 @@ function showLevelUpImage() {
 let canFifteenMinutes = true;
 let fifteenMinuteTimer = setInterval(() => {
     if (document.getElementById('displayTime').innerHTML.split(':')[1] == 15
+    ||document.getElementById('displayTime').innerHTML.split(':')[1] == 45
     && canFifteenMinutes) {
         if (user) addXP(25);
         canFifteenMinutes = false;
@@ -86,16 +87,17 @@ let fifteenMinuteTimer = setInterval(() => {
     }
 }, 100);
 
-let canHour = true;
+let canThirtyMinutes = true;
 let hourTimer = setInterval(() => {
-    if (document.getElementById('displayTime').innerHTML.split(':')[0] != 0
-    && document.getElementById('displayTime').innerHTML.split(':')[1] == 0
+    if ((document.getElementById('displayTime').innerHTML.split(':')[1] == 30
+    || document.getElementById('displayTime').innerHTML.split(':')[1] == 0)
     && document.getElementById('displayTime').innerHTML.split(':')[2] == 0
-    && canHour) {
+    && document.getElementById('displayTime').innerHTML.split(':')[0] != 0
+    && canThirtyMinutes) {
         if (user) addXP(50);
-        canHour = false;
+        canThirtyMinutes = false;
         setTimeout(() => {
-            canHour = true;
+            canThirtyMinutes = true;
         }, 100000);
     }
 }, 100);

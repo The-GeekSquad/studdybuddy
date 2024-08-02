@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="../styles/footer.css">
 </head>
 <body>
+    <div class="loader"></div>
+    <link rel="stylesheet" href="../styles/loader.css">
+    <div class="loader"></div>
+    <link rel="stylesheet" href="../styles/loader.css">
     <header>
-        <h1>Game Study Hub</h1>
+        <h1>Study Hub</h1>
         <nav>
             <ul>
-                <li><a href="/pages/home.html">Home</a></li>
-                <li><a href="/pages/studyTime.html">Study Time</a></li>
-                <li><a href="/pages/review.html">Review</a></li>
-                <li><a href="/pages/tipsPage.html">Tips</a></li>
-                <li><a href="/pages/aboutUs.html">About</a></li>
-                <li><button id="openLoginBtn">Login/Signup</button></li>
-                <li><button id="logoutBtn">Logout</button></li> <!-- Added Logout Button -->
+                <li><a href="./index.html" class="navbar-text">Home</a></li>
+                <li><a href="./studyTime.html" class="navbar-text">Study Time</a></li>
+                <li><a href="./menu.html" class="navbar-text">Flashcards</a></li>
+                <li><a href="./store.html" class="navbar-text">Themes</a></li>
+                <li><button id="openLoginBtn" class="logged-out navbar-text">Login/Signup</button></li>
+                <li><button id="logout-button" class="logged-in navbar-text">Logout</button></li> <!-- Added Logout Button -->
             </ul>
         </nav>
     </header>
@@ -119,6 +122,7 @@
     </div>
     <script src="../dist/index.js"></script>
     <script src="../src/loginthing.js" type="module"></script>
+    <script src="../dist/themeLoader.js"></script>
     
     
     <footer>

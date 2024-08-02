@@ -1,0 +1,22 @@
+.main, body {
+    background: linear-gradient(45deg,#e4f1fe,#949191) !important;
+}
+
+.hero {
+    background: #e4f1fe;
+    color: #333 !important;
+}
+
+footer {
+    background: #B4CEB3;
+    color: #302f2f !important;
+}
+
+header {
+    background: #333;
+    color: #fff !important;
+}
+
+.navbar-text {
+    color: #fff !important;
+}

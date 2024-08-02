@@ -15,18 +15,21 @@
     <script src="../src/music.js" defer></script>
     <script src="../src/stopwatch.js" defer></script>
     <script src="../dist/xpbar.js"></script>
+    <script src="../dist/themeLoader.js"></script>
 </head>
 <body>
-    
+    <div class="loader"></div>
+    <link rel="stylesheet" href="../styles/loader.css">
     <header>
-        <h1>Game Study Hub</h1>
+        <h1>Study Hub</h1>
         <nav>
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./studyTime.html">Study Time</a></li>
-                <li><a href="./menu.html">Flashcards</a></li>
-                <li><button id="openLoginBtn" class="logged-out">Login/Signup</button></li>
-                <li"><button id="logout-button" class="logged-in">Logout</button></li>
+                <li><a href="./index.html" class="navbar-text">Home</a></li>
+                <li><a href="./studyTime.html" class="navbar-text">Study Time</a></li>
+                <li><a href="./menu.html" class="navbar-text">Flashcards</a></li>
+                <li><a href="./store.html" class="navbar-text">Themes</a></li>
+                <li><button id="openLoginBtn" class="logged-out navbar-text">Login/Signup</button></li>
+                <li><button id="logout-button" class="logged-in navbar-text">Logout</button></li> <!-- Added Logout Button -->
             </ul>
         </nav>
     </header>

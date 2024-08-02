@@ -10,14 +10,14 @@ body {
     transition: .2s linear;
 }
 
-.container{
+.main{
     background:linear-gradient(45deg,#e4f1fe,#949191);
     padding: 15px 9%;
     padding-bottom: 100px;
 
 }
 
-.container .heading{
+.main .heading{
 
     text-align:center;
     padding-bottom: 15px;
@@ -33,7 +33,7 @@ body {
     gap:15px;
 }
 
-.container .box-container .box{
+.main .box-container .box{
     box-shadow: 0 5px 10px #232121;
     border-radius: 5px;
     background: #f4f4f4;
@@ -42,29 +42,29 @@ body {
     transition: all 0.5s;
 }
 
-.container .box-container .box img{
+.main .box-container .box img{
     height: 80px;
     transition: all 0.5s;
 }
 
-.container .box-container .box h3{
+.main .box-container .box h3{
     color: #444;
     font-size: 22px;
     padding:10px 0;
     transition: all 0.5s;
 }
 
-.container .box-container .box p{
+.main .box-container .box p{
     color: 777;
     font-size: 15px;
     line-height: 1.8;
     transition: all 0.5s;
 }
 
-.container .box-container .box .edit-button,
-.container .box-container .box .review-button,
-.container .box-container .box .delete-button,
-.container .box-container .box .quiz-button{
+.main .box-container .box .edit-button,
+.main .box-container .box .review-button,
+.main .box-container .box .delete-button,
+.main .box-container .box .quiz-button{
     margin-top: 10px;
     display: inline-block;
     background: #333;
@@ -75,14 +75,14 @@ body {
     transition: all 0.5s;
 }
 
-.container .box-container .box .edit-button:hover,
-.container .box-container .box .review-button:hover,
-.container .box-container .box .delete-button:hover,
-.container .box-container .box .quiz-button:hover{
+.main .box-container .box .edit-button:hover,
+.main .box-container .box .review-button:hover,
+.main .box-container .box .delete-button:hover,
+.main .box-container .box .quiz-button:hover{
     letter-spacing: 1px;
 }
 
-.container .box-container .box:hover{
+.main .box-container .box:hover{
     box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
     transform: scale(1.03);
 }

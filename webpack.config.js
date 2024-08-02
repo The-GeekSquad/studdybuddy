@@ -11,7 +11,9 @@ module.exports = {
         'flashcardManager': './src/flashcardManager.js',
         'flashcardReview': './src/flashcardReview.js',
         'flashcardQuiz': './src/flashcardQuiz.js',
-        'xpbar': './src/xpbar.js'
+        'xpbar': './src/xpbar.js',
+        'store': './src/store.js',
+        'themeLoader': './src/themeLoader.js'
     },
     devtool: 'eval-source-map',
     output: {

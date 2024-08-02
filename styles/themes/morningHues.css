@@ -1,0 +1,22 @@
+.main, body {
+    background: #ffb347 !important;
+}
+
+.hero {
+    background: #028373;
+    color: #333 !important;
+}
+
+footer {
+    background: #a4ae43;
+    color: #000000 !important;
+}
+
+header {
+    background: #a4ae43;
+    color: #000000 !important;
+}
+
+.navbar-text {
+    color: #000000 !important;
+}
