@@ -71,8 +71,8 @@ function levelUp() {
 function showLevelUpImage(id) {
   setTimeout(() => {
     currentXP = 0;
-    updateXPBar();
     updateFirebase();
+    updateXPBar();
   }, 3000); // Show the image for 7 seconds
 }
 
@@ -89,38 +89,35 @@ function showNotifier(id) {
 
 let canFifteenMinutes = true;
 let fifteenMinuteTimer = setInterval(() => {
-    // if (document.getElementById('displayTime').innerHTML.split(':')[1] == 15
-    // ||document.getElementById('displayTime').innerHTML.split(':')[1] == 45
-    if (document.getElementById('displayTime').innerHTML.split(':')[1] != 0
-    && document.getElementById('displayTime').innerHTML.split(':')[2] == 0
+    if ((document.getElementById('displayTime').innerHTML.split(':')[1] == 15
+    || document.getElementById('displayTime').innerHTML.split(':')[1] == 45)
     && canFifteenMinutes) {
+        canFifteenMinutes = false;
         if (user) {
             addXP(25);
             showNotifier(0);
         };
-        canFifteenMinutes = false;
         setTimeout(() => {
             canFifteenMinutes = true;
-        }, 1000);
+        }, 100000);
     }
 }, 100);
 
 let canThirtyMinutes = true;
 let hourTimer = setInterval(() => {
-    // if ((document.getElementById('displayTime').innerHTML.split(':')[1] == 30
-    // || document.getElementById('displayTime').innerHTML.split(':')[1] == 0)
-    // && document.getElementById('displayTime').innerHTML.split(':')[2] == 0
-    // && document.getElementById('displayTime').innerHTML.split(':')[0] != 0
-    if (document.getElementById('displayTime').innerHTML.split(':')[2] == 30
+    if (((document.getElementById('displayTime').innerHTML.split(':')[1] == 30
+    && document.getElementById('displayTime').innerHTML.split(':')[2] == 0)
+    || (document.getElementById('displayTime').innerHTML.split(':')[1] == 0
+    && document.getElementById('displayTime').innerHTML.split(':')[2] != 0))
     && canThirtyMinutes) {
+        canThirtyMinutes = false;
         if (user) {
             addXP(50);
             showNotifier(1);
         };
-        canThirtyMinutes = false;
         setTimeout(() => {
             canThirtyMinutes = true;
-        }, 1000);
+        }, 100000);
     }
 }, 100);
 
