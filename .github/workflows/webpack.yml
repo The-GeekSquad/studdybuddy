@@ -30,11 +30,14 @@ jobs:
         npm install
         npm run build
 
+    - name: Zip artifact for deployment
+      run: zip release.zip ./* -r
+
     - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v1
       with:
         name: github-pages
-        path: .
+        path: release.zip
 
   deploy:
     # Add a dependency to the build job
@@ -55,4 +58,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
+        uses: actions/deploy-pages@v1 # or specific "vX.X.X" version tag for this action
