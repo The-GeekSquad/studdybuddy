@@ -1,0 +1,83 @@
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StuddyBuddy</title>
+    <link rel="stylesheet" href="../styles/loginthing.css"> 
+    <link rel="stylesheet" href="../styles/navmenu.css>
+    <link rel="stylesheet" href="../styles/footer.css>
+    <link type="image/png" sizes="32x32" rel="icon" href="../assets/icons8-study-32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>StuddyBuddy</h1>
+        <nav>
+            <ul>
+                <li><a href="./studyTime.html">Study Time</a></li>
+                <li><a href="./menu.html">Flashcards</a></li>
+                <li><a href="./store.html">Themes</a></li>
+                <li> <a href="./aboutUs.html>About Us</a></li>
+                <li><button id="openLoginBtn" class="logged-out">Login/Signup</button></li>
+                <li><button id="logoutBtn" class="logged-in">Logout</button></li> <!-- Added Logout Button -->
+            </ul>
+        </nav>
+    </header>
+    </header>
+   <!-- Login/Signup/Reset Modal -->
+   <div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeLoginBtn">&times;</span>
+        <div class="tab">
+            <button class="tablinks" data-tab="Login">Login</button>
+            <button class="tablinks" data-tab="Signup">Signup</button>
+            <button class="tablinks" data-tab="Reset">Reset Password</button>
+        </div>
+        <div id="Login" class="tabcontent">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="password" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+        <div id="Signup" class="tabcontent">
+            <h2>Signup</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="password" required autocomplete="new-password">
+                </div>
+                <button type="submit" class="btn">Signup</button>
+            </form>
+        </div>
+        <div id="Reset" class="tabcontent">
+            <h2>Reset Password</h2>
+            <form id="pass-reset-form">
+                <div class="form-group">
+                    <label for="resetEmail">Email</label>
+                    <input type="email" id="resetEmail" name="email" required autocomplete="email">
+                </div>
+                <button type="submit" class="btn">Reset Password</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    
+    <footer>
+        <p>&copy; 2024 StuddyBuddy. All rights reserved.</p>
+    </footer>
+</body>

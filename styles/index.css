@@ -1,0 +1,90 @@
+.main {
+    background:linear-gradient(45deg,#e4f1fe,#949191);
+    padding: 15px 9%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    margin-top: 200px;
+}
+
+.title {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0;
+}
+
+.description {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    line-height: 25px;
+}
+
+.text-body {
+    margin-top: -2%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 500px;
+}
+
+.fade-in {
+    position: relative;
+    right: 0;
+    opacity: 0;
+}
+
+.fade-in.fading {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { right: -50px; opacity: 0; }
+    to { right: 0px; opacity: 1; }
+}
+
+.button {
+    margin-top: 10px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: 0px;
+    align-self: flex-start;
+}
+
+.button:hover {
+    letter-spacing: 1px;
+}
+
+.button:active {
+    background: #585858;
+}
+
+.invert {
+    justify-content: flex-end;
+}
+
+a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
+  

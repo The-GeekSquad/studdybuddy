@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-transform:capitalize;
+    transition: .2s linear;
+}
+
+.main{
+    background:linear-gradient(45deg,#e4f1fe,#949191);
+    padding: 15px 9%;
+    padding-bottom: 100px;
+
+}
+
+.main .heading{
+
+    text-align:center;
+    padding-bottom: 15px;
+    color: #363434;
+    text-shadow: 0 5px 10px #949191;
+    font-size: 49px;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    width: 50%;
+    gap:15px;
+}
+
+.main .box-container .box{
+    box-shadow: 0 5px 10px #232121;
+    border-radius: 5px;
+    background: #f4f4f4;
+    text-align: center;
+    padding: 30px 20px;
+    transition: all 0.5s;
+}
+
+.main .box-container .box img{
+    height: 80px;
+    transition: all 0.5s;
+}
+
+.main .box-container .box h3{
+    color: #444;
+    font-size: 22px;
+    padding:10px 0;
+    transition: all 0.5s;
+}
+
+.main .box-container .box p{
+    color: 777;
+    font-size: 15px;
+    line-height: 1.8;
+    transition: all 0.5s;
+}
+
+.main .box-container .box .edit-button,
+.main .box-container .box .review-button,
+.main .box-container .box .delete-button,
+.main .box-container .box .quiz-button{
+    margin-top: 10px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px 25px;
+    transition: all 0.5s;
+}
+
+.main .box-container .box .edit-button:hover,
+.main .box-container .box .review-button:hover,
+.main .box-container .box .delete-button:hover,
+.main .box-container .box .quiz-button:hover{
+    letter-spacing: 1px;
+}
+
+.main .box-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+    transform: scale(1.03);
+}
+
+
+.button {
+    display: inline-flex;
+    height: 40px;
+    padding: 0;
+    background: #fdf6f6;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.button:hover{
+    background: #656262;
+    letter-spacing: 1px;
+    transform: scale(1.03);
+
+}
+
+.button:active{
+    background: #787575
+
+}
+
+.button__text, .button__icon{
+    display:inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: #000000;
+    height: 100%;
+
+}
+
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 2rem;
+    text-align: center;
+    background: #e4f1fe;
+    color: #333;
+}
+
+.resources {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.resource-item {
+    background: #fff;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+
+a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
+  

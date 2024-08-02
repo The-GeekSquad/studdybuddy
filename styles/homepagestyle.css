@@ -1,0 +1,174 @@
+body {
+    font-family:"Inter", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #DBD3C9;
+}
+
+.navbar a{
+    background-color: #B4CEB3;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    color: #302f2f;
+}
+
+.navdiv{
+    background-color: #B4CEB3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.heading{
+    font-size: 24px;
+    text-decoration: none;
+    color:#302f2f;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    font: 14px;
+}
+
+li a{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#openLoginBtn{
+    border-radius: 6px;
+    border-color: #B4CEB3;
+    border-bottom-color: #B4CEB3;
+    box-shadow: none;
+    padding: 10px;
+    width: 1w0px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+#logout-button{
+    border-radius: 6px;
+    border-color: #B4CEB3;
+    border-bottom-color: #B4CEB3;
+    box-shadow: none;
+    padding: 10px;
+    width: 100px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+#logout-button a{ background-color:#f0f0f0 ;
+    display:inline-block
+
+}
+
+#learnmore
+{border-radius: 6px;
+    border-color: #B4CEB3;
+    border-bottom-color: #B4CEB3;
+    box-shadow: none;
+    padding: 15px;
+    width: 250px;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+
+}
+#learnmore a{
+    font-size: 20px;
+    text-decoration: none;
+    color:#302f2f;
+}
+#learnmore:hover{
+    letter-spacing: 1px;
+}
+
+.hero {
+    padding: 2rem;
+    text-align: left;
+    background: #eddadc ;
+    color: #302f2f;
+    margin-top: 25px;
+}
+
+.main{
+    padding: 2rem;
+    text-align: left;
+    background: #eddadc ;
+    color: #302f2f;
+    margin-top: 25px;
+}
+
+.flashcards{
+    text-align: center;
+    font-size: 30px;
+}
+
+#flashcard-btn
+{border-radius: 6px;
+    border-color: #B4CEB3;
+    border-bottom-color: #B4CEB3;
+    box-shadow: none;
+    padding: 15px;
+    width: 150px;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#flashcard-btn a{
+    text-decoration: none;
+    font-size: 18px;
+    color:#302f2f;
+}
+#flashcard-btn:hover{
+    letter-spacing: 1px;
+    color:#302f2f;
+}
+
+
+#study-btn
+{border-radius: 6px;
+    border-color: #B4CEB3;
+    border-bottom-color: #B4CEB3;
+    box-shadow: none;
+    padding: 15px;
+    width: 150px;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#study-btn a{
+    text-decoration: none;
+    font-size: 18px;
+    color:#302f2f;
+}
+#study-btn:hover{
+    letter-spacing: 1px;
+}
+
+
+footer {
+    background: #B4CEB3;
+    color: #302f2f;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

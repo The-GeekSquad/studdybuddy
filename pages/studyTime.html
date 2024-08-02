@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study</title>
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/timer.css">
+    <link rel="stylesheet" href="../styles/head.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/xpbar.css">
+</head>
+    <link rel="stylesheet" href="../styles/music.css">
+    <script src="../src/music.js" defer></script>
+    <script src="../src/stopwatch.js" defer></script>
+    <script src="../dist/xpbar.js"></script>
+    <script src="../dist/themeLoader.js"></script>
+</head>
+<body>
+    <div class="loader"></div>
+    <link rel="stylesheet" href="../styles/loader.css">
+    <header>
+        <h1>Study Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html" class="navbar-text">Home</a></li>
+                <li><a href="./studyTime.html" class="navbar-text">Study Time</a></li>
+                <li><a href="./menu.html" class="navbar-text">Flashcards</a></li>
+                <li><a href="./store.html" class="navbar-text">Themes</a></li>
+                <li><button id="openLoginBtn" class="logged-out navbar-text">Login/Signup</button></li>
+                <li><button id="logout-button" class="logged-in navbar-text">Logout</button></li> <!-- Added Logout Button -->
+            </ul>
+        </nav>
+    </header>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeLoginBtn">&times;</span>
+            <div class="tab">
+                <button class="tablinks" data-tab="Login">Login</button>
+                <button class="tablinks" data-tab="Signup">Signup</button>
+                <button class="tablinks" data-tab="Reset">Reset Password</button>
+            </div>
+            <div id="Login" class="tabcontent">
+                <h2>Login</h2>
+                <form id="login-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="password" required autocomplete="current-password">
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div id="Signup" class="tabcontent">
+                <h2>Signup</h2>
+                <form id="signup-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" name="password" required autocomplete="new-password">
+                    </div>
+                    <button type="submit">Signup</button>
+                </form>
+            </div>
+            <div id="Reset" class="tabcontent">
+                <h2>Reset Password</h2>
+                <form id="pass-reset-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="resetEmail">Email</label>
+                        <input type="email" id="resetEmail" name="email" required autocomplete="email">
+                    </div>
+                    <button type="submit">Reset Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <h2>Welcome to the Study Zone</h2>
+    </section>
+
+    <div class="stopwatch">
+        <img id="mute-button" class="mute-button" src="../assets/unmuted.png">
+        
+        <div class="xp-container">
+            <div class="xp-bar" id="xp-bar">
+            <span id="level-text" style="z-index: 1; position: absolute; align-self: center; margin-left: -15px; margin-top: 7px;">Lv. 1</span>
+            <div class="xp-fill" id="xp-fill">
+              <div class="xp-glow" id="xp-glow"></div>
+            </div>
+          </div>
+          <div class="xp-info">
+            <!-- <span id="xp-text">XP: 0/100</span><br> -->
+            <!-- <span id="level-text">Level: 1</span> -->
+          </div>
+          <!-- <button onclick="addXP(10)">Gain 10 XP</button> -->
+          <div id="level-up-image" style="display: flex; justify-content: center;">
+            <video style="border-radius: 25px;" class="hidden" width="400">
+                <source src="../assets/fifteenMinuteAlert.mov" type="video/mp4">
+            </video>
+            <video style="border-radius: 25px;" class="hidden" width="400">
+                <source src="../assets/thirtyMinuteAlert.mov" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <h1 id="displayTime">00:00:00</h1>
+        <div class="buttons">  
+            <img id="timerStart" style="width: 30px;" src="../assets/play.png">
+            <img id="timerPause" style="width: 30px;" src="../assets/pause.png">
+            <img id="timerReset" style="width: 30px;" src="../assets/stop.png">
+        </div>
+
+        <div class="music-player">
+            <h2 class="playing">Now Playing: <span class="song-name"></span></h2>
+            <div class="controls">
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="100" value="100" class="slider" id="volumeSlider">
+                </div>
+                <button id="previous" class="btn previous">
+                    <img class="btn-image" src="../assets/skip-to-start.png">
+                </button>
+                <button id="play-pause" class="btn play-pause">
+                    <img class="btn-image" src="../assets/play.png">
+                </button>
+                <button id="next" class="btn next">
+                    <img class="btn-image" src="../assets/skip-to-end.png">
+                </button> 
+            </div>
+        </div>
+    </div>
+
+    <script src="../dist/loginSignUpPasswordReset.js"></script>
+    <script src="../dist/header.js"></script>
+    <script src="../src/loginthing.js"></script>
+    
+    <footer>
+        <p>&copy; 2024 StuddyBuddy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

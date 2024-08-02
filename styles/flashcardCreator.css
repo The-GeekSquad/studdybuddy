@@ -1,0 +1,54 @@
+.title {
+    padding: 2rem;
+    text-align: center;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-family: "Inter", sans-serif;
+}
+
+input {
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.cardbox {
+    width: 50%;
+    height: 20%;
+    resize: none;
+    border: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.done-button {
+    margin-bottom: 20%;
+}
+
+button {
+    margin-top: 10px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: 0px;
+}
+
+button:hover {
+    letter-spacing: 1px;
+}
+
+button:active {
+    background: #585858;
+}
+
+.delete-button {
+    align-self: center;
+}

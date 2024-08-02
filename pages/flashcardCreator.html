@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="../dist/header.js"></script>
+<script src="../dist/flashcardCreator.js"></script>
+<script src="../dist/themeLoader.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hub</title>
+    <link rel="stylesheet" href="../styles/flashcardCreator.css">
+    <link rel="stylesheet" href="../styles/head.css">
+</head>
+<body>
+    <div class="loader"></div>
+    <link rel="stylesheet" href="../styles/loader.css">
+    <header>
+        <h1>Study Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html" class="navbar-text">Home</a></li>
+                <li><a href="./studyTime.html" class="navbar-text">Study Time</a></li>
+                <li><a href="./menu.html" class="navbar-text">Flashcards</a></li>
+                <li><a href="./store.html" class="navbar-text">Themes</a></li>
+                <li><button id="openLoginBtn" class="logged-out navbar-text">Login/Signup</button></li>
+                <li><button id="logout-button" class="logged-in navbar-text">Logout</button></li> <!-- Added Logout Button -->
+            </ul>
+        </nav>
+    </header>
+    <section class="title">
+        <h2>Flashcard Editor</h2>
+
+        <input id="namebox" placeholder="Name">
+
+        <div id="card-container">
+            <div class="card" style="display: flex;">
+                <textarea class="cardbox" maxlength="10000" rows="10" placeholder="Question"></textarea>
+                <textarea class="cardbox" maxlength="10000" rows="10" placeholder="Answer"></textarea>
+                <button class="delete-button">Delete</button>
+            </div>
+        </div>
+        <button class="button" id="add-card-button">+</button>
+
+        <br>
+
+        <button id="save-button" class="save-button">Save</button>
+        <button id="gen-button" class="gen-button">Generate</button>
+        <button id="review-button" class="review-button">Review</button>
+        <button id="done-button" class="done-button">Done</button>
+    </section>
+    <footer>
+        <p>&copy; 2024 Study Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
