@@ -14,7 +14,7 @@ Technologies used:
 - Google Firebase
 - Groq
 ------------------------------------------------------------------------
-SETUP STEPS:
+SETUP STEPS (HOW TO RUN LOCALLY):
 1. Download project
 2. Download & install NodeJS from their official website
 3. Open a terminal window in the directory/folder of the project
