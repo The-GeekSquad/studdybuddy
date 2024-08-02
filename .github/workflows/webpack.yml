@@ -30,6 +30,10 @@ jobs:
         npm install
         npm run build
 
+    - name: Create folder
+      run: |
+        mkdir -p release/
+
     - name: Zip artifact for deployment
       run: zip ./release/release.zip ./* -r
 
