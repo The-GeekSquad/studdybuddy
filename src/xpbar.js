@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 5000);
         });
         Array.from(document.getElementById('level-up-image').children).forEach((video) => {
+            video.volume = 0;
             video.play();
         });
     });
