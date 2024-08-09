@@ -80,6 +80,7 @@ function showNotifier(id) {
     const levelUpImage = document.getElementById('level-up-image');
     levelUpImage.children[id].classList.remove('hidden');
     levelUpImage.children[id].play()
+    notificationAudio[id].volume = 1;
     notificationAudio[id].play();
 
     levelUpImage.children[id].addEventListener('ended', () => {
