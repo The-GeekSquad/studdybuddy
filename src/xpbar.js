@@ -109,7 +109,7 @@ let hourTimer = setInterval(() => {
     if (((document.getElementById('displayTime').innerHTML.split(':')[1] == 30
     && document.getElementById('displayTime').innerHTML.split(':')[2] == 0)
     || (document.getElementById('displayTime').innerHTML.split(':')[1] == 0
-    && document.getElementById('displayTime').innerHTML.split(':')[2] != 0))
+    && document.getElementById('displayTime').innerHTML.split(':')[0] != 0))
     && canThirtyMinutes) {
         canThirtyMinutes = false;
         if (user) {
